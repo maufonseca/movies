@@ -12,6 +12,10 @@ class Movie {
   var title : String = ""
   var description : String = ""
   var imageUrl : String = ""
-  var year : String = ""
+  var releaseDate : String = ""
   var bookmarked : Bool = false
+  
+  func getReleaseYear() -> String {
+    return String(releaseDate.prefix(4))
+  }
 }

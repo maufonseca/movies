@@ -31,8 +31,9 @@ class MoviesRequester {
         if let movieDic = result as? NSDictionary {
           let movie = Movie.init()
           movie.title = movieDic["title"] as! String
-          movie.year = movieDic["release_date"] as! String
+          movie.releaseDate = movieDic["release_date"] as! String
           movie.imageUrl = "\(imagesUrl)\(movieDic["poster_path"] ?? "")"
+          movie.description = movieDic["overview"] as! String
           responseArray.append(movie)
         }
       }

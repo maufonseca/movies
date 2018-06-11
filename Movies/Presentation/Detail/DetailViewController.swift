@@ -7,20 +7,33 @@
 //
 
 import UIKit
+import Alamofire
+import AlamofireImage
 
 class DetailViewController: UIViewController {
-
-    override func viewDidLoad() {
-        super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
+  @IBOutlet var favoriteButton: UIButton!
+  @IBOutlet var imageView: UIImageView!
+  @IBOutlet var titleLabel: UILabel!
+  @IBOutlet var descriptionLabel: UILabel!
+  
+  var currentMovie : Movie?
+  
+  override func viewDidLoad() {
+    super.viewDidLoad()
+    titleLabel.text = currentMovie?.title
+    descriptionLabel.text = currentMovie?.description
+    Alamofire.request((currentMovie?.imageUrl)!).responseImage {
+      
+      response in
+      if let image = response.result.value {
+        self.imageView.image = image
+      }
     }
+  }
 
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
-    }
-    
+  @IBAction func favoriteTapped(_ sender: UIButton) {
+  }
+  
   @IBAction func goBack(_ sender: UIButton) {
     self.navigationController?.popViewController(animated: true)
   }

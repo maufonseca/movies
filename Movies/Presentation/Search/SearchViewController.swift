@@ -44,7 +44,7 @@ class SearchViewController: UIViewController, UICollectionViewDelegate, UICollec
     let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "movieCell", for: indexPath) as! MovieCollectionViewCell
     
     cell.titleLabel.text = currentMovie.title
-    cell.yearLabel.text = currentMovie.year
+    cell.yearLabel.text = currentMovie.getReleaseYear()
     
     Alamofire.request(currentMovie.imageUrl).responseImage {
       
@@ -69,6 +69,14 @@ class SearchViewController: UIViewController, UICollectionViewDelegate, UICollec
   func updateMovieList(array:Array<Movie>) {
     self.movies = array
     self.movieCollectionView.reloadData()
+  }
+  
+  override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+    if(segue.identifier == "detailSegue") {
+      let tappedMovie = sender as! Movie
+      let vc = segue.destination as! DetailViewController
+      vc.currentMovie = tappedMovie
+    }
   }
   
 }
