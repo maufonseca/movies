@@ -7,6 +7,8 @@
 //
 
 import UIKit
+import Alamofire
+import AlamofireImage
 
 class SearchViewController: UIViewController, UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout {
   
@@ -43,6 +45,14 @@ class SearchViewController: UIViewController, UICollectionViewDelegate, UICollec
     
     cell.titleLabel.text = currentMovie.title
     cell.yearLabel.text = currentMovie.year
+    
+    Alamofire.request(currentMovie.imageUrl).responseImage {
+      
+      response in
+      if let image = response.result.value {
+        cell.imageView.image = image
+      }
+    }
     
     return cell
   }
