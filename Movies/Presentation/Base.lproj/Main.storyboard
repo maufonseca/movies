@@ -43,7 +43,7 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="PQr-Ze-W5v"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Movies" image="first" id="acW-dT-cKf"/>
+                    <tabBarItem key="tabBarItem" title="Movies" image="home" id="acW-dT-cKf"/>
                     <connections>
                         <outlet property="movieCollectionView" destination="TZp-x6-1zZ" id="sD7-Qx-B8w"/>
                         <segue destination="fYj-Lg-za3" kind="show" identifier="detailSegue" id="BlL-7p-45W"/>
@@ -82,7 +82,7 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="O1u-W8-tvY"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Bookmarks" image="second" id="cPa-gy-q4n"/>
+                    <tabBarItem key="tabBarItem" title="Bookmarks" image="bookmarks" id="cPa-gy-q4n"/>
                     <connections>
                         <segue destination="fYj-Lg-za3" kind="show" identifier="detailSegue" id="Mny-Np-bLK"/>
                     </connections>
@@ -168,9 +168,10 @@
                     <tabBar key="tabBar" contentMode="scaleToFill" id="W28-zg-YXA">
                         <rect key="frame" x="0.0" y="975" width="768" height="49"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
-                        <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.0" colorSpace="custom" customColorSpace="sRGB"/>
+                        <color key="backgroundColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <color key="tintColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                        <color key="selectedImageTintColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <color key="barTintColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <color key="selectedImageTintColor" red="0.96470588239999999" green="0.97254901959999995" blue="0.97647058819999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     </tabBar>
                     <connections>
                         <segue destination="9pv-A4-QxB" kind="relationship" relationship="viewControllers" id="u7Y-xg-7CH"/>
@@ -183,9 +184,9 @@
         </scene>
     </scenes>
     <resources>
-        <image name="back" width="48" height="48"/>
-        <image name="first" width="48" height="48"/>
-        <image name="second" width="48" height="48"/>
+        <image name="back" width="24" height="24"/>
+        <image name="bookmarks" width="24" height="24"/>
+        <image name="home" width="24" height="24"/>
     </resources>
     <inferredMetricsTieBreakers>
         <segue reference="Mny-Np-bLK"/>
