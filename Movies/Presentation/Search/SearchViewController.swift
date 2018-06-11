@@ -24,11 +24,13 @@ class SearchViewController: UIViewController, UICollectionViewDelegate, UICollec
     super.viewDidLoad()
     
     movieCollectionView.register(UINib.init(nibName: "MovieCollectionViewCell", bundle: nil), forCellWithReuseIdentifier: "movieCell")
+  
+    movieCollectionView.register(HeaderCell.self, forSupplementaryViewOfKind: UICollectionElementKindSectionHeader, withReuseIdentifier: "headerView")
     
     presenter = SearchPresenter.init(controller: self)
     requester = MoviesRequester.init(presenter: presenter!)
     interactor = SearchInteractor.init(requester: requester!)
-    interactor!.getResults(query: "a")
+    interactor?.getNextPage()
     
   }
 
@@ -53,8 +55,13 @@ class SearchViewController: UIViewController, UICollectionViewDelegate, UICollec
         cell.imageView.image = image
       }
     }
-    
     return cell
+  }
+  
+  func collectionView(_ collectionView: UICollectionView, viewForSupplementaryElementOfKind kind: String, at indexPath: IndexPath) -> UICollectionReusableView {
+    let headerView = collectionView.dequeueReusableSupplementaryView(ofKind: UICollectionElementKindSectionHeader, withReuseIdentifier: "headerView", for: indexPath)
+    headerView.frame.size.height = 100
+    return headerView
   }
   
   func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
@@ -66,8 +73,18 @@ class SearchViewController: UIViewController, UICollectionViewDelegate, UICollec
     performSegue(withIdentifier: "detailSegue", sender: movies[indexPath.row])
   }
   
+  //Getting scroll position to load more results (infinite scroll)
+  func scrollViewDidScroll(_ scrollView: UIScrollView) {
+    for cell in self.movieCollectionView.visibleCells {
+      let indexPath = self.movieCollectionView.indexPath(for: cell)
+      if((indexPath?.row)! == 20*(interactor?.currentPage)!-5) {
+        interactor?.getNextPage()
+      }
+    }
+  }
+  
   func updateMovieList(array:Array<Movie>) {
-    self.movies = array
+    self.movies += array
     self.movieCollectionView.reloadData()
   }
   

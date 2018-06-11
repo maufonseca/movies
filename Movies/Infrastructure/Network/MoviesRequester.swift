@@ -16,8 +16,9 @@ class MoviesRequester {
     self.presenter = presenter
   }
   
-  func requestMovieList(query : String) {
-    Alamofire.request(moviesUrl).responseJSON { response in
+  func requestMovieList(page : Int) {
+    let url = "\(moviesUrl)&page=\(page)"
+    Alamofire.request(url).responseJSON { response in
       
       if response.result.value is NSNull {
         //presenter.onError("Erro ao carregar filmes")

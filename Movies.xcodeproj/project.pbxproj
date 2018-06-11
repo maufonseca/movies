@@ -25,6 +25,8 @@
 		276A9F2F20CAD683003B0626 /* MoviesRequester.swift in Sources */ = {isa = PBXBuildFile; fileRef = 276A9F2E20CAD683003B0626 /* MoviesRequester.swift */; };
 		276A9F3120CADB1A003B0626 /* SearchPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 276A9F3020CADB1A003B0626 /* SearchPresenter.swift */; };
 		276A9F3520CADB63003B0626 /* SearchInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 276A9F3420CADB63003B0626 /* SearchInteractor.swift */; };
+		27ED82AC20CF2B2800CDBD35 /* HeaderCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27ED82AA20CF2B2800CDBD35 /* HeaderCell.swift */; };
+		27ED82AD20CF2B2800CDBD35 /* HeaderCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 27ED82AB20CF2B2800CDBD35 /* HeaderCell.xib */; };
 		62C0CC106357B3C56E08901E /* Pods_MoviesTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 12093C62CC1CEAB349B544E1 /* Pods_MoviesTests.framework */; };
 		D27D25F756594E251DE4DBCC /* Pods_Movies.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F3555B3A50254E2AB90DAEE8 /* Pods_Movies.framework */; };
 		FEED6DD3A21D80836575E998 /* Pods_MoviesUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 42D4552B5E7FDFD88AAC93E3 /* Pods_MoviesUITests.framework */; };
@@ -74,6 +76,8 @@
 		276A9F2E20CAD683003B0626 /* MoviesRequester.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoviesRequester.swift; sourceTree = "<group>"; };
 		276A9F3020CADB1A003B0626 /* SearchPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchPresenter.swift; sourceTree = "<group>"; };
 		276A9F3420CADB63003B0626 /* SearchInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchInteractor.swift; sourceTree = "<group>"; };
+		27ED82AA20CF2B2800CDBD35 /* HeaderCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeaderCell.swift; sourceTree = "<group>"; };
+		27ED82AB20CF2B2800CDBD35 /* HeaderCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HeaderCell.xib; sourceTree = "<group>"; };
 		361D5F28C1AB755BEE50972A /* Pods-MoviesUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MoviesUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-MoviesUITests/Pods-MoviesUITests.release.xcconfig"; sourceTree = "<group>"; };
 		3CE92A97DEAEFEAF0741F9F0 /* Pods-Movies.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Movies.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Movies/Pods-Movies.debug.xcconfig"; sourceTree = "<group>"; };
 		42D4552B5E7FDFD88AAC93E3 /* Pods_MoviesUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MoviesUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -172,6 +176,8 @@
 				276A9F2420CAC44F003B0626 /* SearchBarTableViewCell.swift */,
 				276A9F2020CAC418003B0626 /* MovieCollectionViewCell.swift */,
 				276A9F2120CAC418003B0626 /* MovieCollectionViewCell.xib */,
+				27ED82AA20CF2B2800CDBD35 /* HeaderCell.swift */,
+				27ED82AB20CF2B2800CDBD35 /* HeaderCell.xib */,
 			);
 			path = Search;
 			sourceTree = "<group>";
@@ -386,6 +392,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				27ED82AD20CF2B2800CDBD35 /* HeaderCell.xib in Resources */,
 				276A9EE820CAADDA003B0626 /* LaunchScreen.storyboard in Resources */,
 				276A9EE520CAADDA003B0626 /* Assets.xcassets in Resources */,
 				276A9EE320CAADB9003B0626 /* Main.storyboard in Resources */,
@@ -495,6 +502,7 @@
 				276A9F1620CABE56003B0626 /* BuyViewController.swift in Sources */,
 				276A9F3120CADB1A003B0626 /* SearchPresenter.swift in Sources */,
 				2729500E20CEC7BF00C6DBC2 /* Constants.swift in Sources */,
+				27ED82AC20CF2B2800CDBD35 /* HeaderCell.swift in Sources */,
 				276A9F3520CADB63003B0626 /* SearchInteractor.swift in Sources */,
 				276A9F1F20CAC18D003B0626 /* Movie.swift in Sources */,
 				276A9F1820CABE69003B0626 /* DetailViewController.swift in Sources */,
@@ -679,7 +687,10 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = B6DJ9HD249;
 				INFOPLIST_FILE = Movies/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.maufonseca.Movies;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
@@ -695,7 +706,10 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = B6DJ9HD249;
 				INFOPLIST_FILE = Movies/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.maufonseca.Movies;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
@@ -712,7 +726,11 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = B6DJ9HD249;
 				INFOPLIST_FILE = MoviesTests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.maufonseca.MoviesTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
@@ -730,7 +748,11 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = B6DJ9HD249;
 				INFOPLIST_FILE = MoviesTests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.maufonseca.MoviesTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
@@ -747,7 +769,11 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = B6DJ9HD249;
 				INFOPLIST_FILE = MoviesUITests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.maufonseca.MoviesUITests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
@@ -764,7 +790,11 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = B6DJ9HD249;
 				INFOPLIST_FILE = MoviesUITests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.maufonseca.MoviesUITests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
