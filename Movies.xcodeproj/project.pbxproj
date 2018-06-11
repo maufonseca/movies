@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		2729500E20CEC7BF00C6DBC2 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2729500D20CEC7BF00C6DBC2 /* Constants.swift */; };
 		276A9EDC20CAADB7003B0626 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 276A9EDB20CAADB7003B0626 /* AppDelegate.swift */; };
 		276A9EDE20CAADB7003B0626 /* SearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 276A9EDD20CAADB7003B0626 /* SearchViewController.swift */; };
 		276A9EE020CAADB7003B0626 /* BookmarkViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 276A9EDF20CAADB7003B0626 /* BookmarkViewController.swift */; };
@@ -49,6 +50,7 @@
 /* Begin PBXFileReference section */
 		12093C62CC1CEAB349B544E1 /* Pods_MoviesTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MoviesTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		1FB1DFE74DDBF5AD51B31DB1 /* Pods-MoviesTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MoviesTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-MoviesTests/Pods-MoviesTests.release.xcconfig"; sourceTree = "<group>"; };
+		2729500D20CEC7BF00C6DBC2 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		276A9ED820CAADB6003B0626 /* Movies.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Movies.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		276A9EDB20CAADB7003B0626 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		276A9EDD20CAADB7003B0626 /* SearchViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchViewController.swift; sourceTree = "<group>"; };
@@ -237,8 +239,9 @@
 		276A9F1320CAB44D003B0626 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
-				276A9EE620CAADDA003B0626 /* LaunchScreen.storyboard */,
 				276A9EDB20CAADB7003B0626 /* AppDelegate.swift */,
+				2729500D20CEC7BF00C6DBC2 /* Constants.swift */,
+				276A9EE620CAADDA003B0626 /* LaunchScreen.storyboard */,
 				276A9EE420CAADDA003B0626 /* Assets.xcassets */,
 			);
 			path = "Supporting Files";
@@ -489,6 +492,7 @@
 				276A9EE020CAADB7003B0626 /* BookmarkViewController.swift in Sources */,
 				276A9F1620CABE56003B0626 /* BuyViewController.swift in Sources */,
 				276A9F3120CADB1A003B0626 /* SearchPresenter.swift in Sources */,
+				2729500E20CEC7BF00C6DBC2 /* Constants.swift in Sources */,
 				276A9F3520CADB63003B0626 /* SearchInteractor.swift in Sources */,
 				276A9F1F20CAC18D003B0626 /* Movie.swift in Sources */,
 				276A9F1820CABE69003B0626 /* DetailViewController.swift in Sources */,

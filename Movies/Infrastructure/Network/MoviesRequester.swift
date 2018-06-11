@@ -7,6 +7,7 @@
 //
 
 import Foundation
+import Alamofire
 
 class MoviesRequester {
   let presenter : SearchPresenter
@@ -16,30 +17,27 @@ class MoviesRequester {
   }
   
   func requestMovieList(query : String) {
-    
-    //Call API
-    let movie1 = Movie.init()
-    movie1.title = "Title 1"
-    movie1.year = "2016"
-    
-    let movie2  = Movie.init()
-    movie2.title = "Title 2"
-    movie2.year = "2018"
-    
-    let movie3  = Movie.init()
-    movie3.title = "Title 3"
-    movie3.year = "2018"
-    
-    let movie4  = Movie.init()
-    movie4.title = "Title 4"
-    movie4.year = "2018"
-    
-    let responseArray = [movie1, movie2, movie3, movie4]
-    
-    //on API success
-    presenter.updateMoviesArray(array:responseArray)
-    
-    //on API error
-    //presenter.onError(_errorMessage: String)
+    Alamofire.request(moviesUrl).responseJSON { response in
+      
+      if response.result.value is NSNull {
+        //presenter.onError("Erro ao carregar filmes")
+        return
+      }
+      var responseArray : Array<Movie> = []
+      
+      let json = response.result.value as? NSDictionary
+      let results = json?["results"] as! NSArray
+      for result in results {
+        if let movieDic = result as? NSDictionary {
+          let movie = Movie.init()
+          movie.title = movieDic["title"] as! String
+          movie.year = movieDic["release_date"] as! String
+          movie.imageUrl = "\(imagesUrl)\(movieDic["poster_path"] ?? "")"
+          responseArray.append(movie)
+        }
+      }
+      //on API success
+      self.presenter.updateMoviesArray(array:responseArray)
+    }
   }
 }

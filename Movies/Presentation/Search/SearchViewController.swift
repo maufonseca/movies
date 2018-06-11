@@ -58,6 +58,7 @@ class SearchViewController: UIViewController, UICollectionViewDelegate, UICollec
   
   func updateMovieList(array:Array<Movie>) {
     self.movies = array
+    self.movieCollectionView.reloadData()
   }
   
 }
