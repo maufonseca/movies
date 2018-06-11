@@ -10,26 +10,24 @@ import UIKit
 import Alamofire
 import AlamofireImage
 
-class SearchViewController: UIViewController, UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout {
+class HomeViewController: UIViewController, UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout {
   
   
   @IBOutlet var movieCollectionView: UICollectionView!
   
-  var presenter : SearchPresenter?
+  var presenter : HomePresenter?
   var requester : MoviesRequester?
-  var interactor : SearchInteractor?
+  var interactor : HomeInteractor?
   var movies : Array<Movie> = []
   
   override func viewDidLoad() {
     super.viewDidLoad()
     
     movieCollectionView.register(UINib.init(nibName: "MovieCollectionViewCell", bundle: nil), forCellWithReuseIdentifier: "movieCell")
-  
-    movieCollectionView.register(HeaderCell.self, forSupplementaryViewOfKind: UICollectionElementKindSectionHeader, withReuseIdentifier: "headerView")
     
-    presenter = SearchPresenter.init(controller: self)
+    presenter = HomePresenter.init(controller: self)
     requester = MoviesRequester.init(presenter: presenter!)
-    interactor = SearchInteractor.init(requester: requester!)
+    interactor = HomeInteractor.init(requester: requester!)
     interactor?.getNextPage()
     
   }
@@ -56,12 +54,6 @@ class SearchViewController: UIViewController, UICollectionViewDelegate, UICollec
       }
     }
     return cell
-  }
-  
-  func collectionView(_ collectionView: UICollectionView, viewForSupplementaryElementOfKind kind: String, at indexPath: IndexPath) -> UICollectionReusableView {
-    let headerView = collectionView.dequeueReusableSupplementaryView(ofKind: UICollectionElementKindSectionHeader, withReuseIdentifier: "headerView", for: indexPath)
-    headerView.frame.size.height = 100
-    return headerView
   }
   
   func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {

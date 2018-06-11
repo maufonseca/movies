@@ -10,9 +10,9 @@ import Foundation
 import Alamofire
 
 class MoviesRequester {
-  let presenter : SearchPresenter
+  let presenter : HomePresenter
   
-  init(presenter:SearchPresenter) {
+  init(presenter:HomePresenter) {
     self.presenter = presenter
   }
   

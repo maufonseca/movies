@@ -8,7 +8,7 @@
 
 import Foundation
 
-class SearchInteractor {
+class HomeInteractor {
   var currentPage : Int = 0
   let requester : MoviesRequester?
   

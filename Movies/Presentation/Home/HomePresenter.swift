@@ -8,10 +8,10 @@
 
 import Foundation
 
-class SearchPresenter {
-  var controller : SearchViewController
+class HomePresenter {
+  var controller : HomeViewController
 
-  init(controller:SearchViewController) {
+  init(controller:HomeViewController) {
     self.controller = controller
   }
   
