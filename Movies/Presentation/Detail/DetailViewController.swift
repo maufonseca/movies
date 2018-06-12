@@ -32,7 +32,7 @@ class DetailViewController: UIViewController {
       }
     }
     //check bookmarked
-    if(diskOperator.isBookmarked(movie: currentMovie!)) { //already added
+    if(diskOperator.isBookmarked(id: currentMovie!.id)) { //already added
       currentMovie?.bookmarked = true
       setupRemoveBookmarkButton()
     } else { //add to bookmark setup
@@ -59,14 +59,14 @@ class DetailViewController: UIViewController {
   }
   
   func removeBookmark() {
-    diskOperator.removeBookmark(movie: currentMovie!)
+    diskOperator.removeBookmark(id: currentMovie!.id)
     currentMovie?.bookmarked = false
     setupAddBookmarkButton()
   }
   
   func addBookmark() {
-    //the realm operation will set the bookmark flag = true
-    diskOperator.addBookmark(movie: currentMovie!)
+    currentMovie?.bookmarked = true
+    diskOperator.addBookmark(bookmark: currentMovie!)
     setupRemoveBookmarkButton()
   }
   

@@ -37,25 +37,32 @@ class BookmarkDiskOperator {
     presenter.updateMoviesArray(array: responseArray)
   }
   
-  func addBookmark(movie:Movie) {
+  func addBookmark(bookmark:Movie) {
     // Save bookmark
+    let movie = Movie.init()
+    movie.id = bookmark.id
+    movie.title = bookmark.title
+    movie.releaseDate = bookmark.releaseDate
+    movie.bookmarked = bookmark.bookmarked
+    movie.imageUrl = bookmark.imageUrl
+    movie.overview = bookmark.overview
     try! realm.write {
       movie.bookmarked = true
       realm.add(movie)
     }
   }
   
-  func removeBookmark(movie:Movie) {
+  func removeBookmark(id:Int) {
     // Remove bookmark by ID
-    let theMovie = realm.objects(Movie.self).filter("id == \(movie.id)").first
+    let theMovie = realm.objects(Movie.self).filter("id == \(id)").first
     try! realm.write {
       realm.delete(theMovie!)
     }
   }
   
-  func isBookmarked(movie:Movie) -> Bool {
+  func isBookmarked(id:Int) -> Bool {
     // Find bookmark by ID
-    let bookmarks = realm.objects(Movie.self).filter("id == \(movie.id)")
+    let bookmarks = realm.objects(Movie.self).filter("id == \(id)")
     print("Realm bookmarks matches: \(bookmarks.count)")
     return bookmarks.count > 0 ? true:false
   }
