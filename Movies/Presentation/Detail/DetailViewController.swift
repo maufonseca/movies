@@ -11,13 +11,14 @@ import Alamofire
 import AlamofireImage
 
 class DetailViewController: UIViewController {
-  @IBOutlet var favoriteButton: UIButton!
+  @IBOutlet var bookmarkButton: UIButton!
   @IBOutlet var imageView: UIImageView!
   @IBOutlet var titleLabel: UILabel!
   @IBOutlet var descriptionLabel: UILabel!
   @IBOutlet var yearLabel: UILabel!
   
   var currentMovie : Movie?
+  var diskOperator = BookmarkDiskOperator.init()
   
   override func viewDidLoad() {
     super.viewDidLoad()
@@ -30,9 +31,43 @@ class DetailViewController: UIViewController {
         self.imageView.image = image
       }
     }
+    //check bookmarked
+    if(diskOperator.isBookmarked(movie: currentMovie!)) { //already added
+      currentMovie?.bookmarked = true
+      setupRemoveBookmarkButton()
+    } else { //add to bookmark setup
+      currentMovie?.bookmarked = false
+      setupAddBookmarkButton()
+    }
   }
 
-  @IBAction func favoriteTapped(_ sender: UIButton) {
+  func setupAddBookmarkButton() {
+    bookmarkButton.setTitle("Marcar favorito", for: .normal)
+    bookmarkButton.setImage(Image(named: "bookmarks"), for: .normal)
+  }
+  func setupRemoveBookmarkButton() {
+    bookmarkButton.setTitle("Desmarcar favorito", for: .normal)
+    bookmarkButton.setImage(Image(named: "star_filled"), for: .normal)
+  }
+  
+  @IBAction func bookmarkTapped(_ sender: UIButton) {
+    if(currentMovie?.bookmarked)! {
+      removeBookmark()
+    } else {
+      addBookmark()
+    }
+  }
+  
+  func removeBookmark() {
+    diskOperator.removeBookmark(movie: currentMovie!)
+    currentMovie?.bookmarked = false
+    setupAddBookmarkButton()
+  }
+  
+  func addBookmark() {
+    //the realm operation will set the bookmark flag = true
+    diskOperator.addBookmark(movie: currentMovie!)
+    setupRemoveBookmarkButton()
   }
   
   @IBAction func goBack(_ sender: UIButton) {

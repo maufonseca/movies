@@ -11,12 +11,10 @@ import RealmSwift
 
 class BookmarkDiskOperator {
   
-  
   let realm = try! Realm()
-  let presenter : BookmarkPresenter
   
-  init(presenter:BookmarkPresenter) {
-    self.presenter = presenter
+  init() {
+    
   }
   
   func getBookmarkList() {
@@ -28,20 +26,21 @@ class BookmarkDiskOperator {
   func addBookmark(movie:Movie) {
     // Save bookmark
     try! realm.write {
+      movie.bookmarked = true
       realm.add(movie)
     }
   }
   
   func removeBookmark(movie:Movie) {
-    // Remove bookmark
+    // Remove bookmark by ID
     let theMovie = realm.objects(Movie.self).filter("id == \(movie.id)").first
     try! realm.write {
       realm.delete(theMovie!)
     }
   }
   
-  func findBookmark(movie:Movie) -> Bool {
-    // Find bookmark
+  func isBookmarked(movie:Movie) -> Bool {
+    // Find bookmark by ID
     let bookmarks = realm.objects(Movie.self).filter("id == \(movie.id)")
     print("Realm bookmarks matches: \(bookmarks.count)")
     return bookmarks.count > 0 ? true:false

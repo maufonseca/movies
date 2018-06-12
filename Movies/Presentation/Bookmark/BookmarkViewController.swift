@@ -22,11 +22,15 @@ class BookmarkViewController: UIViewController {
     bookmarksCollectionView.register(UINib.init(nibName: "MovieCollectionViewCell", bundle: nil), forCellWithReuseIdentifier: "movieCell")
     
     presenter = BookmarkPresenter.init(controller: self)
-    diskOperator = BookmarkDiskOperator.init(presenter: presenter!)
+    diskOperator = BookmarkDiskOperator.init()
     interactor = BookmarkInteractor.init(diskOperator: diskOperator!)
-    interactor?.loadBookmarks()
   }
 
+  override func viewWillAppear(_ animated: Bool) {
+    super.viewWillAppear(animated)
+    interactor?.loadBookmarks()
+  }
+  
   func updateMovieList(array:Array<Movie>) {
     self.movies = array
     self.bookmarksCollectionView.reloadData()
