@@ -14,7 +14,7 @@
 		276A9EE320CAADB9003B0626 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 276A9EE120CAADB9003B0626 /* Main.storyboard */; };
 		276A9EE520CAADDA003B0626 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 276A9EE420CAADDA003B0626 /* Assets.xcassets */; };
 		276A9EE820CAADDA003B0626 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 276A9EE620CAADDA003B0626 /* LaunchScreen.storyboard */; };
-		276A9EF320CAADDC003B0626 /* MoviesTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 276A9EF220CAADDC003B0626 /* MoviesTests.swift */; };
+		276A9EF320CAADDC003B0626 /* MovieModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 276A9EF220CAADDC003B0626 /* MovieModelTests.swift */; };
 		276A9EFE20CAADDC003B0626 /* MoviesUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 276A9EFD20CAADDC003B0626 /* MoviesUITests.swift */; };
 		276A9F1620CABE56003B0626 /* BuyViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 276A9F1520CABE56003B0626 /* BuyViewController.swift */; };
 		276A9F1820CABE69003B0626 /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 276A9F1720CABE69003B0626 /* DetailViewController.swift */; };
@@ -62,7 +62,7 @@
 		276A9EE720CAADDA003B0626 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		276A9EE920CAADDA003B0626 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		276A9EEE20CAADDC003B0626 /* MoviesTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MoviesTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		276A9EF220CAADDC003B0626 /* MoviesTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoviesTests.swift; sourceTree = "<group>"; };
+		276A9EF220CAADDC003B0626 /* MovieModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieModelTests.swift; sourceTree = "<group>"; };
 		276A9EF420CAADDC003B0626 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		276A9EF920CAADDC003B0626 /* MoviesUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MoviesUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		276A9EFD20CAADDC003B0626 /* MoviesUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoviesUITests.swift; sourceTree = "<group>"; };
@@ -152,7 +152,7 @@
 		276A9EF120CAADDC003B0626 /* MoviesTests */ = {
 			isa = PBXGroup;
 			children = (
-				276A9EF220CAADDC003B0626 /* MoviesTests.swift */,
+				276A9EF220CAADDC003B0626 /* MovieModelTests.swift */,
 				276A9EF420CAADDC003B0626 /* Info.plist */,
 			);
 			path = MoviesTests;
@@ -518,7 +518,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				276A9EF320CAADDC003B0626 /* MoviesTests.swift in Sources */,
+				276A9EF320CAADDC003B0626 /* MovieModelTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
