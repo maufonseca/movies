@@ -15,6 +15,7 @@ class DetailViewController: UIViewController {
   @IBOutlet var imageView: UIImageView!
   @IBOutlet var titleLabel: UILabel!
   @IBOutlet var descriptionLabel: UILabel!
+  @IBOutlet var yearLabel: UILabel!
   
   var currentMovie : Movie?
   
@@ -22,8 +23,8 @@ class DetailViewController: UIViewController {
     super.viewDidLoad()
     titleLabel.text = currentMovie?.title
     descriptionLabel.text = currentMovie?.description
+    yearLabel.text = currentMovie?.getReleaseYear()
     Alamofire.request((currentMovie?.imageUrl)!).responseImage {
-      
       response in
       if let image = response.result.value {
         self.imageView.image = image
@@ -38,5 +39,13 @@ class DetailViewController: UIViewController {
     self.navigationController?.popViewController(animated: true)
   }
   
+  
+  
+  override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+    if(segue.identifier == "buySegue") {
+      let vc = segue.destination as! BuyViewController
+      vc.currentMovie = self.currentMovie
+    }
+  }
 
 }
