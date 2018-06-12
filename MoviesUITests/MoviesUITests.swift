@@ -9,28 +9,73 @@
 import XCTest
 
 class MoviesUITests: XCTestCase {
-        
-    override func setUp() {
-        super.setUp()
-        
-        // Put setup code here. This method is called before the invocation of each test method in the class.
-        
-        // In UI tests it is usually best to stop immediately when a failure occurs.
-        continueAfterFailure = false
-        // UI tests must launch the application that they test. Doing this in setup will make sure it happens for each test method.
-        XCUIApplication().launch()
-
-        // In UI tests it’s important to set the initial state - such as interface orientation - required for your tests before they run. The setUp method is a good place to do this.
+  
+  override func setUp() {
+    super.setUp()
+    continueAfterFailure = false
+    XCUIApplication().launch()
+  }
+  
+  override func tearDown() {
+    super.tearDown()
+  }
+  
+  //This test will keep scrolling the movies for a while. If no error occurs, then it Passed
+  func testInfiniteScroll() {
+    let app = XCUIApplication()
+    let collectionView = app.children(matching: .window).element(boundBy: 0).children(matching: .other).element.children(matching: .other).element.children(matching: .other).element.children(matching: .other).element.children(matching: .other).element.children(matching: .other).element.children(matching: .other).element.children(matching: .collectionView).element
+    
+    for _ in 1...10 {
+      sleep(2)
+      collectionView.swipeUp()
+    }
+    app.collectionViews.children(matching: .cell).element(boundBy:10).children(matching: .other).element.children(matching: .other).element.tap()
+    
+    let elementsQuery = app.scrollViews.otherElements
+    elementsQuery.buttons["Marcar favorito"].tap()
+    elementsQuery.buttons["Voltar"].tap()
+    
+    for _ in 1...10 {
+      sleep(2)
+      collectionView.swipeUp()
     }
     
-    override func tearDown() {
-        // Put teardown code here. This method is called after the invocation of each test method in the class.
-        super.tearDown()
-    }
+  }
+  
+  //This test will make some actions through whole app, if no crashes occurs, then it passed
+  func testAllActions() {
+    let app = XCUIApplication()
+    let collectionViewsQuery = app.collectionViews
+    collectionViewsQuery.children(matching: .cell).element(boundBy: 8).children(matching: .other).element.children(matching: .other).element.tap()
     
-    func testExample() {
-        // Use recording to get started writing UI tests.
-        // Use XCTAssert and related functions to verify your tests produce the correct results.
-    }
+    let scrollViewsQuery = app.scrollViews
+    let elementsQuery = scrollViewsQuery.otherElements
+    let marcarFavoritoButton = elementsQuery.buttons["Marcar favorito"]
+    marcarFavoritoButton.tap()
+    let desmarcarFavoritoButton = elementsQuery.buttons["Desmarcar favorito"]
+    desmarcarFavoritoButton.tap()
+    marcarFavoritoButton.tap()
+    desmarcarFavoritoButton.tap()
     
+    let comprarButton = app.buttons["Comprar"]
+    comprarButton.tap()
+    
+    let voltarButton = elementsQuery.buttons["Voltar"]
+    voltarButton.tap()
+    voltarButton.tap()
+    
+    let tabBarsQuery = app.tabBars
+    let filmesButton = tabBarsQuery.buttons["Filmes"]
+    tabBarsQuery.buttons["Favoritos"].tap()
+    sleep(2)
+    collectionViewsQuery.children(matching: .cell).element(boundBy: 0).children(matching: .other).element.children(matching: .other).element.tap()
+    desmarcarFavoritoButton.tap()
+    marcarFavoritoButton.tap()
+    comprarButton.tap()
+    scrollViewsQuery.otherElements.containing(.button, identifier:"Voltar").element.tap()
+    voltarButton.tap()
+    voltarButton.tap()
+    filmesButton.tap()
+    
+  }
 }
