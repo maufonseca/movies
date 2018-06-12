@@ -1,6 +1,9 @@
 # Uncomment the next line to define a global platform for your project
 platform :ios, '11.4'
 
+# ignore all warnings from all pods
+inhibit_all_warnings!
+
 target 'Movies' do
   # Using Swift and want to use dynamic frameworks
   use_frameworks!

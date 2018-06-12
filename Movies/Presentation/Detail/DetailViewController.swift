@@ -22,7 +22,7 @@ class DetailViewController: UIViewController {
   override func viewDidLoad() {
     super.viewDidLoad()
     titleLabel.text = currentMovie?.title
-    descriptionLabel.text = currentMovie?.description
+    descriptionLabel.text = currentMovie?.overview
     yearLabel.text = currentMovie?.getReleaseYear()
     Alamofire.request((currentMovie?.imageUrl)!).responseImage {
       response in

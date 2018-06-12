@@ -36,7 +36,7 @@ class MoviesRequester {
           movie.title = movieDic["title"] as! String
           movie.releaseDate = movieDic["release_date"] as! String
           movie.imageUrl = "\(imagesUrl)\(movieDic["poster_path"] ?? "")"
-          movie.description = movieDic["overview"] as! String
+          movie.overview = movieDic["overview"] as! String
           responseArray.append(movie)
         }
       }

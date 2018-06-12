@@ -7,14 +7,15 @@
 //
 
 import Foundation
+import RealmSwift
 
-class Movie {
-  var id : Int = -1
-  var title : String = ""
-  var description : String = ""
-  var imageUrl : String = ""
-  var releaseDate : String = ""
-  var bookmarked : Bool = false
+class Movie : Object {
+  @objc dynamic var id : Int = -1
+  @objc dynamic var title : String = ""
+  @objc dynamic var overview : String = ""
+  @objc dynamic var imageUrl : String = ""
+  @objc dynamic var releaseDate : String = ""
+  @objc dynamic var bookmarked : Bool = false
   
   func getReleaseYear() -> String {
     return String(releaseDate.prefix(4))
