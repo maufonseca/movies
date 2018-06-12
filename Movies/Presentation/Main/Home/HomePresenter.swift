@@ -18,4 +18,8 @@ class HomePresenter {
   func updateMoviesArray(array:Array<Movie>) {
     controller.updateMovieList(array: array)
   }
+  
+  func gotError(message:String) {
+    controller.showMessage(message:message)
+  }
 }

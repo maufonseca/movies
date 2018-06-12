@@ -46,5 +46,9 @@ class HomeViewController: CollectionViewController {
     self.movieCollectionView.reloadData()
   }
   
+  func showMessage(message: String){
+    print(message)
+  }
+  
 }
 
