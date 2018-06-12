@@ -24,6 +24,9 @@
 		276A9F2F20CAD683003B0626 /* MoviesRequester.swift in Sources */ = {isa = PBXBuildFile; fileRef = 276A9F2E20CAD683003B0626 /* MoviesRequester.swift */; };
 		276A9F3120CADB1A003B0626 /* HomePresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 276A9F3020CADB1A003B0626 /* HomePresenter.swift */; };
 		276A9F3520CADB63003B0626 /* HomeInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 276A9F3420CADB63003B0626 /* HomeInteractor.swift */; };
+		27ED82AF20CF52D900CDBD35 /* BookmarkDiskOperator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27ED82AE20CF52D900CDBD35 /* BookmarkDiskOperator.swift */; };
+		27ED82B120CF532D00CDBD35 /* BookmarkPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27ED82B020CF532D00CDBD35 /* BookmarkPresenter.swift */; };
+		27ED82B320CF546C00CDBD35 /* BookmarkInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27ED82B220CF546C00CDBD35 /* BookmarkInteractor.swift */; };
 		62C0CC106357B3C56E08901E /* Pods_MoviesTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 12093C62CC1CEAB349B544E1 /* Pods_MoviesTests.framework */; };
 		D27D25F756594E251DE4DBCC /* Pods_Movies.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F3555B3A50254E2AB90DAEE8 /* Pods_Movies.framework */; };
 		FEED6DD3A21D80836575E998 /* Pods_MoviesUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 42D4552B5E7FDFD88AAC93E3 /* Pods_MoviesUITests.framework */; };
@@ -72,6 +75,9 @@
 		276A9F2E20CAD683003B0626 /* MoviesRequester.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoviesRequester.swift; sourceTree = "<group>"; };
 		276A9F3020CADB1A003B0626 /* HomePresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomePresenter.swift; sourceTree = "<group>"; };
 		276A9F3420CADB63003B0626 /* HomeInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeInteractor.swift; sourceTree = "<group>"; };
+		27ED82AE20CF52D900CDBD35 /* BookmarkDiskOperator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookmarkDiskOperator.swift; sourceTree = "<group>"; };
+		27ED82B020CF532D00CDBD35 /* BookmarkPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookmarkPresenter.swift; sourceTree = "<group>"; };
+		27ED82B220CF546C00CDBD35 /* BookmarkInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookmarkInteractor.swift; sourceTree = "<group>"; };
 		361D5F28C1AB755BEE50972A /* Pods-MoviesUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MoviesUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-MoviesUITests/Pods-MoviesUITests.release.xcconfig"; sourceTree = "<group>"; };
 		3CE92A97DEAEFEAF0741F9F0 /* Pods-Movies.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Movies.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Movies/Pods-Movies.debug.xcconfig"; sourceTree = "<group>"; };
 		42D4552B5E7FDFD88AAC93E3 /* Pods_MoviesUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MoviesUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -197,6 +203,8 @@
 			isa = PBXGroup;
 			children = (
 				276A9EDF20CAADB7003B0626 /* BookmarkViewController.swift */,
+				27ED82B220CF546C00CDBD35 /* BookmarkInteractor.swift */,
+				27ED82B020CF532D00CDBD35 /* BookmarkPresenter.swift */,
 			);
 			path = Bookmark;
 			sourceTree = "<group>";
@@ -229,6 +237,7 @@
 		276A9F1220CAB21F003B0626 /* Disk */ = {
 			isa = PBXGroup;
 			children = (
+				27ED82AE20CF52D900CDBD35 /* BookmarkDiskOperator.swift */,
 			);
 			path = Disk;
 			sourceTree = "<group>";
@@ -493,12 +502,15 @@
 				276A9F3120CADB1A003B0626 /* HomePresenter.swift in Sources */,
 				2729500E20CEC7BF00C6DBC2 /* Constants.swift in Sources */,
 				276A9F3520CADB63003B0626 /* HomeInteractor.swift in Sources */,
+				27ED82B120CF532D00CDBD35 /* BookmarkPresenter.swift in Sources */,
 				276A9F1F20CAC18D003B0626 /* Movie.swift in Sources */,
 				276A9F1820CABE69003B0626 /* DetailViewController.swift in Sources */,
 				276A9F2220CAC418003B0626 /* MovieCollectionViewCell.swift in Sources */,
+				27ED82AF20CF52D900CDBD35 /* BookmarkDiskOperator.swift in Sources */,
 				276A9EDC20CAADB7003B0626 /* AppDelegate.swift in Sources */,
 				276A9F2F20CAD683003B0626 /* MoviesRequester.swift in Sources */,
 				276A9EDE20CAADB7003B0626 /* HomeViewController.swift in Sources */,
+				27ED82B320CF546C00CDBD35 /* BookmarkInteractor.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

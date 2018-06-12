@@ -129,6 +129,7 @@
                     </view>
                     <tabBarItem key="tabBarItem" title="Favoritos" image="bookmarks" id="cPa-gy-q4n"/>
                     <connections>
+                        <outlet property="bookmarksCollectionView" destination="Kmu-EL-fll" id="Ens-YD-c0S"/>
                         <segue destination="fYj-Lg-za3" kind="show" identifier="detailSegue" id="Mny-Np-bLK"/>
                     </connections>
                 </viewController>
@@ -409,6 +410,6 @@
         <image name="home" width="24" height="24"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="BlL-7p-45W"/>
+        <segue reference="Mny-Np-bLK"/>
     </inferredMetricsTieBreakers>
 </document>

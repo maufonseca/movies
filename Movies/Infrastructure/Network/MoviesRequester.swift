@@ -30,7 +30,9 @@ class MoviesRequester {
       let results = json?["results"] as! NSArray
       for result in results {
         if let movieDic = result as? NSDictionary {
+          //Parsing response to models
           let movie = Movie.init()
+          movie.id = movieDic["id"] as! Int
           movie.title = movieDic["title"] as! String
           movie.releaseDate = movieDic["release_date"] as! String
           movie.imageUrl = "\(imagesUrl)\(movieDic["poster_path"] ?? "")"
