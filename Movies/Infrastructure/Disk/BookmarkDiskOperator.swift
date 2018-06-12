@@ -14,13 +14,27 @@ class BookmarkDiskOperator {
   let realm = try! Realm()
   
   init() {
-    
   }
   
-  func getBookmarkList() {
+  func getBookmarkList(presenter : BookmarkPresenter) {
     // Query Realm for all bookmarks
+    var responseArray : Array<Movie> = []
     let bookmarks = realm.objects(Movie.self)
     print("Realm bookmarks count: \(bookmarks.count)")
+    
+    for bookmark in bookmarks {
+      print("MovieFound", bookmark.title)
+      let movie = Movie.init()
+      movie.id = bookmark.id
+      movie.title = bookmark.title
+      movie.releaseDate = bookmark.releaseDate
+      movie.bookmarked = bookmark.bookmarked
+      movie.imageUrl = bookmark.imageUrl
+      movie.overview = bookmark.overview
+      responseArray.append(movie)
+    }
+    
+    presenter.updateMoviesArray(array: responseArray)
   }
   
   func addBookmark(movie:Movie) {

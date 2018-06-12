@@ -15,16 +15,9 @@ class BookmarkInteractor {
     self.diskOperator = diskOperator
   }
   
-  func loadBookmarks() {
+  func loadBookmarks(presenter:BookmarkPresenter){
     print("requesting bookmarks")
-    diskOperator?.getBookmarkList()
+    diskOperator?.getBookmarkList(presenter:presenter)
   }
   
-  func addBookmark() {
-    
-  }
-  
-  func removeBookmark() {
-  
-  }
 }
