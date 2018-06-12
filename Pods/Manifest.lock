@@ -2,6 +2,39 @@ PODS:
   - Alamofire (4.7.2)
   - AlamofireImage (3.3.1):
     - Alamofire (~> 4.5)
+  - MaterialComponents/AnimationTiming (54.7.0)
+  - MaterialComponents/Buttons (54.7.0):
+    - MaterialComponents/Ink
+    - MaterialComponents/private/Math
+    - MaterialComponents/ShadowElevations
+    - MaterialComponents/ShadowLayer
+    - MaterialComponents/Typography
+    - MDFInternationalization
+    - MDFTextAccessibility
+  - MaterialComponents/Ink (54.7.0):
+    - MaterialComponents/private/Math
+  - MaterialComponents/OverlayWindow (54.7.0):
+    - MaterialComponents/private/Application
+  - MaterialComponents/private/Application (54.7.0)
+  - MaterialComponents/private/KeyboardWatcher (54.7.0):
+    - MaterialComponents/private/Application
+  - MaterialComponents/private/Math (54.7.0)
+  - MaterialComponents/private/Overlay (54.7.0)
+  - MaterialComponents/ShadowElevations (54.7.0)
+  - MaterialComponents/ShadowLayer (54.7.0):
+    - MaterialComponents/ShadowElevations
+  - MaterialComponents/Snackbar (54.7.0):
+    - MaterialComponents/AnimationTiming
+    - MaterialComponents/Buttons
+    - MaterialComponents/OverlayWindow
+    - MaterialComponents/private/Application
+    - MaterialComponents/private/KeyboardWatcher
+    - MaterialComponents/private/Overlay
+    - MaterialComponents/Typography
+  - MaterialComponents/Typography (54.7.0):
+    - MaterialComponents/private/Application
+  - MDFInternationalization (1.0.4)
+  - MDFTextAccessibility (1.2.0)
   - Realm (3.3.2):
     - Realm/Headers (= 3.3.2)
   - Realm/Headers (3.3.2)
@@ -11,21 +44,28 @@ PODS:
 DEPENDENCIES:
   - Alamofire (~> 4.7)
   - AlamofireImage
+  - MaterialComponents/Snackbar
   - RealmSwift
 
 SPEC REPOS:
   https://github.com/CocoaPods/Specs.git:
     - Alamofire
     - AlamofireImage
+    - MaterialComponents
+    - MDFInternationalization
+    - MDFTextAccessibility
     - Realm
     - RealmSwift
 
 SPEC CHECKSUMS:
   Alamofire: e4fa87002c137ba2d8d634d2c51fabcda0d5c223
   AlamofireImage: 3b35b586853abaf94ca1250f4e94cff3c21a4c0d
+  MaterialComponents: 4de1b70557a135c39a9901d2db4ae32600b735f1
+  MDFInternationalization: e355b0cebecf53d60233bd267084e49366c82513
+  MDFTextAccessibility: 94098925e0853551c5a311ce7c1ecefbe297cdb6
   Realm: d927fbf66df5532cfafc08afb5f7e53ded37b894
   RealmSwift: 4e903a494e05d866581d69ad6f7e7b879d446baf
 
-PODFILE CHECKSUM: c5bbb4a53cbb72f6e8a3ce55cdef47830d101c71
+PODFILE CHECKSUM: 91312f4e690e36a7fb3233f002e35164cdbc7fac
 
 COCOAPODS: 1.5.0

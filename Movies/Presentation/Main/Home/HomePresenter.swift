@@ -21,5 +21,6 @@ class HomePresenter {
   
   func gotError(message:String) {
     controller.showMessage(message:message)
+    controller.pauseInfiniteScroll()
   }
 }

@@ -46,6 +46,7 @@ class CollectionViewController: UIViewController, UICollectionViewDelegate, UICo
     
     cell.titleLabel.text = currentMovie.title
     cell.yearLabel.text = currentMovie.getReleaseYear()
+    cell.imageView.image = nil
     
     Alamofire.request(currentMovie.imageUrl).responseImage {
       

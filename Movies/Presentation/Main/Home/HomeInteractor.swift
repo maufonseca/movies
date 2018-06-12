@@ -22,9 +22,7 @@ class HomeInteractor {
   }
   
   func getNextPage() {
-    if(ReachabilityWorker.isConnectedToNetwork()) { //only increase page if connected
-      currentPage+=1
-    }
+    currentPage+=1
     requestCurrentPage()
   }
   

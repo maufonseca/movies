@@ -12,6 +12,7 @@ target 'Movies' do
   pod 'Alamofire', '~> 4.7'
   pod 'AlamofireImage'
   pod 'RealmSwift'
+  pod 'MaterialComponents/Snackbar'
   target 'MoviesTests' do
     inherit! :search_paths
     # Pods for testing

@@ -9,6 +9,7 @@
 import UIKit
 import Alamofire
 import AlamofireImage
+import MaterialComponents.MaterialSnackbar
 
 class HomeViewController: CollectionViewController {
   
@@ -47,7 +48,13 @@ class HomeViewController: CollectionViewController {
   }
   
   func showMessage(message: String){
-    print(message)
+    let snackMessage = MDCSnackbarMessage()
+    snackMessage.text = message
+    MDCSnackbarManager.show(snackMessage)
+  }
+  
+  func pauseInfiniteScroll() { //in case of error, decrease the page count because call failed
+    interactor?.decreasePage()
   }
   
 }
