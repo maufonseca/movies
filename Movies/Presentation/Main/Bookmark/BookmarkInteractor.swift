@@ -1,5 +1,5 @@
 //
-//  HomeInteractor.swift
+//  BookmarkInteractor.swift
 //  Movies
 //
 //  Created by Ringa Sd on 11/06/2018.

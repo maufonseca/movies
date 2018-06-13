@@ -42,11 +42,11 @@ class DetailViewController: UIViewController {
   }
 
   func setupAddBookmarkButton() {
-    bookmarkButton.setTitle("Marcar favorito", for: .normal)
+    bookmarkButton.setTitle(NSLocalizedString("addBookmark", comment: ""), for: .normal)
     bookmarkButton.setImage(Image(named: "bookmarks"), for: .normal)
   }
   func setupRemoveBookmarkButton() {
-    bookmarkButton.setTitle("Desmarcar favorito", for: .normal)
+    bookmarkButton.setTitle(NSLocalizedString("removeBookmark", comment: ""), for: .normal)
     bookmarkButton.setImage(Image(named: "star_filled"), for: .normal)
   }
   

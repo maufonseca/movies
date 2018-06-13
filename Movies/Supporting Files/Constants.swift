@@ -9,5 +9,5 @@
 import Foundation
 
 let apiKey = "6cc4923b86bafb7b10136e440290a05d"
-let moviesUrl = "https://api.themoviedb.org/3/discover/movie?api_key=6cc4923b86bafb7b10136e440290a05d&language=pt-BR&sort_by=popularity.desc&include_adult=false&include_video=false"
+let moviesUrl = "https://api.themoviedb.org/3/discover/movie?api_key=6cc4923b86bafb7b10136e440290a05d&sort_by=popularity.desc&include_adult=false&include_video=false"
 let imagesUrl = "https://image.tmdb.org/t/p/w500"

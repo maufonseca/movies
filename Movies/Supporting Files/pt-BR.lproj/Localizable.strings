@@ -1,0 +1,13 @@
+/* 
+  Localizable.strings
+  Movies
+
+  Created by Ringa Sd on 13/06/2018.
+  Copyright © 2018 Mauricio Fonseca. All rights reserved.
+*/
+
+"languageCode" = "pt-BR";
+"emptyResponse" = "Recebemos uma resposta vazia do servidor";
+"notConnected" = "Sem conexão à internet...";
+"addBookmark" = "Adicionar Favorito";
+"removeBookmark" = "Desmarcar Favorito";

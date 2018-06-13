@@ -12,7 +12,7 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Filmes-->
+        <!--Movies-->
         <scene sceneID="hNz-n2-bh7">
             <objects>
                 <viewController id="9pv-A4-QxB" customClass="HomeViewController" customModule="Movies" customModuleProvider="target" sceneMemberID="viewController">
@@ -38,7 +38,7 @@
                             <view alpha="0.84999999999999998" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="k3M-vQ-cJ5">
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="68"/>
                                 <subviews>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Filmes" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8dF-rA-3M2">
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Movies" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8dF-rA-3M2">
                                         <rect key="frame" x="16" y="34" width="343" height="24"/>
                                         <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
                                         <color key="textColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -66,7 +66,7 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="PQr-Ze-W5v"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Filmes" image="home" id="acW-dT-cKf"/>
+                    <tabBarItem key="tabBarItem" title="Movies" image="home" id="acW-dT-cKf"/>
                     <nil key="simulatedTopBarMetrics"/>
                     <connections>
                         <outlet property="movieCollectionView" destination="TZp-x6-1zZ" id="sD7-Qx-B8w"/>
@@ -77,7 +77,7 @@
             </objects>
             <point key="canvasLocation" x="749.60000000000002" y="-399.85007496251876"/>
         </scene>
-        <!--Favoritos-->
+        <!--Bookmarks-->
         <scene sceneID="wg7-f3-ORb">
             <objects>
                 <viewController id="8rJ-Kc-sve" customClass="BookmarkViewController" customModule="Movies" customModuleProvider="target" sceneMemberID="viewController">
@@ -103,7 +103,7 @@
                             <view alpha="0.85000002384185791" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="FCa-yO-a0U">
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="68"/>
                                 <subviews>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Favoritos" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hgQ-qH-0wV">
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Bookmarks" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hgQ-qH-0wV">
                                         <rect key="frame" x="16" y="34" width="343" height="24"/>
                                         <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
                                         <color key="textColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -131,7 +131,7 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="O1u-W8-tvY"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Favoritos" image="bookmarks" id="cPa-gy-q4n"/>
+                    <tabBarItem key="tabBarItem" title="Bookmarks" image="bookmarks" id="cPa-gy-q4n"/>
                     <connections>
                         <outlet property="bookmarksCollectionView" destination="Kmu-EL-fll" id="Ens-YD-c0S"/>
                         <segue destination="fYj-Lg-za3" kind="show" identifier="detailSegue" id="Mny-Np-bLK"/>
@@ -156,11 +156,11 @@
                                         <rect key="frame" x="0.0" y="0.0" width="375" height="404.5"/>
                                         <subviews>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="U6L-Zf-f9A">
-                                                <rect key="frame" x="8" y="8" width="72" height="48"/>
+                                                <rect key="frame" x="8" y="8" width="64" height="48"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="48" id="ifo-AL-yYD"/>
                                                 </constraints>
-                                                <state key="normal" title="Voltar" image="back">
+                                                <state key="normal" title="Back" image="back">
                                                     <color key="titleColor" red="0.14901960780000001" green="0.14901960780000001" blue="0.14901960780000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 </state>
                                                 <connections>
@@ -191,7 +191,7 @@
                                                     <constraint firstAttribute="height" constant="32" id="ssJ-6t-J3W"/>
                                                 </constraints>
                                                 <fontDescription key="fontDescription" type="system" pointSize="18"/>
-                                                <state key="normal" title="Marcar favorito" image="bookmarks">
+                                                <state key="normal" title="Add bookmark" image="bookmarks">
                                                     <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 </state>
                                                 <connections>
@@ -243,7 +243,7 @@
                                     <constraint firstAttribute="height" constant="56" id="VaX-0Q-47E"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="18"/>
-                                <state key="normal" title="Comprar">
+                                <state key="normal" title="Buy">
                                     <color key="titleColor" red="0.96470588239999999" green="0.97254901959999995" blue="0.97647058819999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </state>
                                 <connections>
@@ -312,7 +312,7 @@
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="48" id="eQY-s3-6cJ"/>
                                                 </constraints>
-                                                <state key="normal" title="Voltar" image="back">
+                                                <state key="normal" title="Back" image="back">
                                                     <color key="titleColor" red="0.96470588239999999" green="0.97254901959999995" blue="0.97647058819999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 </state>
                                                 <connections>
@@ -414,6 +414,6 @@
         <image name="home" width="24" height="24"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="Mny-Np-bLK"/>
+        <segue reference="BlL-7p-45W"/>
     </inferredMetricsTieBreakers>
 </document>

@@ -1,0 +1,36 @@
+
+/* Class = "UILabel"; text = "Nenhuma opção de compra"; ObjectID = "72n-PH-GgV"; */
+"72n-PH-GgV.text" = "Nenhuma opção de compra";
+
+/* Class = "UILabel"; text = "Filmes"; ObjectID = "8dF-rA-3M2"; */
+"8dF-rA-3M2.text" = "Filmes";
+
+/* Class = "UILabel"; text = "Title Label"; ObjectID = "OE3-aB-XeE"; */
+"OE3-aB-XeE.text" = "Titulo";
+
+/* Class = "UIButton"; normalTitle = "Marcar favorito"; ObjectID = "Sar-I8-5qw"; */
+"Sar-I8-5qw.normalTitle" = "Marcar favorito";
+
+/* Class = "UIButton"; normalTitle = "Voltar"; ObjectID = "U6L-Zf-f9A"; */
+"U6L-Zf-f9A.normalTitle" = "Voltar";
+
+/* Class = "UILabel"; text = "Description Label"; ObjectID = "Weo-KJ-31g"; */
+"Weo-KJ-31g.text" = "Descrição";
+
+/* Class = "UITabBarItem"; title = "Filmes"; ObjectID = "acW-dT-cKf"; */
+"acW-dT-cKf.title" = "Filmes";
+
+/* Class = "UITabBarItem"; title = "Favoritos"; ObjectID = "cPa-gy-q4n"; */
+"cPa-gy-q4n.title" = "Favoritos";
+
+/* Class = "UIButton"; normalTitle = "Comprar"; ObjectID = "eWo-sL-6Pd"; */
+"eWo-sL-6Pd.normalTitle" = "Comprar";
+
+/* Class = "UILabel"; text = "Favoritos"; ObjectID = "hgQ-qH-0wV"; */
+"hgQ-qH-0wV.text" = "Favoritos";
+
+/* Class = "UILabel"; text = "Year Label"; ObjectID = "mLd-C1-wer"; */
+"mLd-C1-wer.text" = "Ano";
+
+/* Class = "UIButton"; normalTitle = "Voltar"; ObjectID = "skB-OX-71h"; */
+"skB-OX-71h.normalTitle" = "Voltar";
