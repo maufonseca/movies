@@ -34,24 +34,19 @@ class MoviesRequester {
           let results = json?["results"] as! NSArray
           for result in results {
             if let movieDic = result as? NSDictionary {
-              //Parsing response to models
-              let movie = Movie.init()
-              movie.id = movieDic["id"] as! Int
-              movie.title = movieDic["title"] as! String
-              movie.releaseDate = movieDic["release_date"] as! String
-              movie.imageUrl = "\(imagesUrl)\(movieDic["poster_path"] ?? "")"
-              movie.overview = movieDic["overview"] as! String
-              responseArray.append(movie)
+              //Ccnverting response to models
+              responseArray.append(Movie.init(fromDictionary: movieDic))
             }
           }
-          //on API success
+          //Inform the presenter about API success
           self.presenter.updateMoviesArray(array:responseArray)
           
         case .failure(let error):
+          //Inform the presenter about API fail
           self.presenter.gotError(message:error.localizedDescription)
         }
       }
-    } else { //No connection
+    } else { //No internet connection
       print("Sem conexão à internet...")
       presenter.gotError(message:"Sem conexão à internet...")
     }

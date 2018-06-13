@@ -17,7 +17,17 @@ class Movie : Object {
   @objc dynamic var releaseDate : String = ""
   @objc dynamic var bookmarked : Bool = false
   
+  convenience init(fromDictionary movieDic: NSDictionary) {
+    self.init()
+    id = movieDic["id"] as! Int
+    title = movieDic["title"] as! String
+    releaseDate = movieDic["release_date"] as! String
+    imageUrl = "\(imagesUrl)\(movieDic["poster_path"] ?? "")"
+    overview = movieDic["overview"] as! String
+  }
+  
   func getReleaseYear() -> String {
     return String(releaseDate.prefix(4))
   }
+  
 }

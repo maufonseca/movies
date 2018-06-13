@@ -24,13 +24,7 @@ class BookmarkDiskOperator {
     
     for bookmark in bookmarks {
       print("MovieFound", bookmark.title)
-      let movie = Movie.init()
-      movie.id = bookmark.id
-      movie.title = bookmark.title
-      movie.releaseDate = bookmark.releaseDate
-      movie.bookmarked = bookmark.bookmarked
-      movie.imageUrl = bookmark.imageUrl
-      movie.overview = bookmark.overview
+      let movie = Movie(value: bookmark) //creating a non persistent copy of object
       responseArray.append(movie)
     }
     
@@ -39,13 +33,7 @@ class BookmarkDiskOperator {
   
   func addBookmark(bookmark:Movie) {
     // Save bookmark
-    let movie = Movie.init()
-    movie.id = bookmark.id
-    movie.title = bookmark.title
-    movie.releaseDate = bookmark.releaseDate
-    movie.bookmarked = bookmark.bookmarked
-    movie.imageUrl = bookmark.imageUrl
-    movie.overview = bookmark.overview
+    let movie = Movie(value:bookmark) //creating a copy for persistence
     try! realm.write {
       movie.bookmarked = true
       realm.add(movie)
