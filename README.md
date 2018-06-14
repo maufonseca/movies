@@ -2,7 +2,7 @@
 # Movies Demo App - iOS <img src="img/logo.png" width="24px">
 
 Este aplicativo consome uma API com os filmes mais aclamados da atualidade e exibe essas informações aos usuários.
-A intenção é demonstrar o uso de Swift 4.2 para funcionalidades básicas como estruturação de layout adaptável a diversas dimensões de tela e orientação de dispositivo, chamadas a uma API REST através da biblioteca Alamofire, lida com imagens e cache, persistência do modelo de dados com Realm, suporte a dispositivos antigos com iOS 8.0, organização das features nas camadas da arquitetura Clean, implantação de testes de unidade e também de interface.
+A intenção é demonstrar o uso de Swift 4.2 para funcionalidades básicas como estruturação de layout adaptável a diversas dimensões de tela e orientação de dispositivo, chamadas a uma API REST através da biblioteca Alamofire, lida com imagens e cache, persistência do modelo de dados com Realm, suporte a dispositivos antigos com iOS 8.0, organização das features nas camadas da arquitetura Clean, implantação de testes de unidade, de interface e localização do app para PT-BR.
 
 ### Linguagem utilizada
 
@@ -17,9 +17,9 @@ A intenção é demonstrar o uso de Swift 4.2 para funcionalidades básicas como
 
 ### Rodando os testes automáticos
 1. Abrir o projeto no Xcode utilizando os passos acima
+1. É necessário rodar os **testes em um iOS 9+**, independente do app ser compatível com iOS 8+.
 1. Abrir o navegador de testes do Xcode (CMD + 6)
-1. Apertar o botão de play na frente do teste que quiser rodar
-**obs:** É necessário rodar os **testes em um iOS 9+**, independente do app ser compatível com iOS 8+
+1. Apertar o botão de play na frente do testes mostrados no navegador de teste
 
 ### Descrição
 - O APP tem 3 telas e consome a API do [themoviedb]("https://api.themoviedb.org/)
@@ -63,9 +63,10 @@ Veja abaixo como é o aplicativo
 1. Usa Alamofire para networking e AlamofireImages para o cache de imagens
 1. Faz parse de JSON -> Objeto
 1. Clean-Architecture
+1. Localização do app para pt-BR (Base English)
 1. Testes unitários com mocks utilizando XCTest Framework
 1. Testes funcionais de interface utilizando XCTest
 1. Apresenta bom desempenho de memória e processamento (testes com Instruments)
 1. Documentação em código e versionamento seguindo boas práticas
-1. Interface personalizada deixando app mais fluido
+1. Interface deslizável (scrolls) deixando app mais fluido em todas as telas
 
