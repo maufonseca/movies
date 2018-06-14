@@ -2,17 +2,24 @@
 # Movies Demo App - iOS <img src="img/logo.png" width="24px">
 
 Este aplicativo consome uma API com os filmes mais aclamados da atualidade e exibe essas informações aos usuários.
+A intenção é demonstrar o uso de Swift 4.2 para funcionalidades básicas como estruturação de layout adaptável a diversas dimensões de tela e orientação de dispositivo, chamadas a uma API REST através da biblioteca Alamofire, lida com imagens e cache, persistência do modelo de dados com Realm, suporte a dispositivos antigos com iOS 8.0, organização das features nas camadas da arquitetura Clean, implantação de testes de unidade e também de interface.
 
 ### Linguagem utilizada
 
 - Swift 4.2 <img src="img/swift.png" width="16px">
 
 
-### Instalação
-- Baixar ou clonar o projeto em um diretório do sistema Mac OS
-- No terminal, ir até o diretório do projeto e digitar >`pod install`
-- Após a instalação dos pods, abrir o arquivo Movies.xcworkspace com o Xcode
-- Apertar o botão de Play para rodar o app em um dispositivo ou simulador com iOS 8.0+
+### Instalar/Rodar
+1. Baixar ou clonar o projeto em um diretório do sistema Mac OS
+1. No terminal, ir até o diretório do projeto e digitar >`pod install`
+1. Após a instalação dos pods, abrir o arquivo Movies.xcworkspace com o Xcode
+1. Apertar o botão de Play para rodar o app em um dispositivo ou simulador com iOS 8.0+
+
+### Rodando os testes automáticos
+1. Abrir o projeto no Xcode utilizando os passos acima
+1. Abrir o navegador de testes do Xcode (CMD + 6)
+1. Apertar o botão de play na frente do teste que quiser rodar
+**obs:** É necessário rodar os **testes em um iOS 9+**, independente do app ser compatível com iOS 8+
 
 ### Descrição
 - O APP tem 3 telas e consome a API do [themoviedb]("https://api.themoviedb.org/)
@@ -43,10 +50,11 @@ Veja abaixo como é o aplicativo
 - Como não há opção de compra nessa API do themoviedb, mostra um empty state.
 
 ### Funcionalidades implementadas
-1. Checa se tem conexão com internet.
-1. Caso haja falha na request, avisa a falha.
+1. Compila sem erros e nem warnings
+1. Checa se tem conexão com interne.
+1. Caso haja falha na request, avisa a falha
 1. Cache de imagens
-1. Scroll infinito
+1. Scroll infinito na collection view
 1. Suporta versão mínima do iOS: 8.0
 1. Usa um arquivo .gitignore no seu repositório.
 1. Usa Storyboard e Autolayout (suporta todas as telas de iPhones)
