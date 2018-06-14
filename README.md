@@ -1,15 +1,13 @@
 
-# Movies Demo App - iOS
+# Movies Demo App - iOS <img src="img/logo.png" width="56px">
+
 ---
-Este aplicativo simplesmente consome uma API com os filmes mais aclamados da atualidade e exibe essas informações aos usuários.
-<p align="center">
-	<img src="img/logo.png" width="120px">
-</p>
 
-### Linguagens de programação
+Este aplicativo consome uma API com os filmes mais aclamados da atualidade e exibe essas informações aos usuários.
 
-- Swift 4.2
-<img src="img/swift.png" width="80px">
+### Linguagem utilizada
+
+- Swift 4.2 <img src="img/swift.png" width="32px">
 
 
 ### Instalação
@@ -18,8 +16,7 @@ Este aplicativo simplesmente consome uma API com os filmes mais aclamados da atu
 - Após a instalação dos pods, abrir o arquivo Movies.xcworkspace com o Xcode
 - Apertar o botão de Play para rodar o app em um dispositivo ou simulador com iOS 8.0+
 
-### Funcões
-
+### Descrição
 - O APP tem 3 telas e consome a API do [themoviedb]("https://api.themoviedb.org/)
 - A Primeira tela listar os filmes mais atuais
 - A segunda tela mostra o detalhe de algum filme selecionado
@@ -28,10 +25,10 @@ Este aplicativo simplesmente consome uma API com os filmes mais aclamados da atu
 ### ScreenShots
 Veja abaixo como é o aplicativo
 
-<img src="img/home.png" width="500"> 
-<img src="img/bookmark.png" width="500"> 
-<img src="img/detail.png" width="500"> 
-<img src="img/buy.png" width="500">                            
+<img src="img/home.png" width="400"> 
+<img src="img/bookmark.png" width="400"> 
+<img src="img/detail.png" width="400"> 
+<img src="img/buy.png" width="400">                            
 
 
 ### Tela de principal/tela de favoritos
@@ -47,23 +44,22 @@ Veja abaixo como é o aplicativo
 ### Tela de compra do filme
 - Como não há opção de compra nessa API do themoviedb, mostra um empty state.
 
-### Contem
-- Checa se tem conexão com internet.
-- Caso haja falha na request, avisa a falha.
-- Cache de imagens
-- Scroll infinito
-- Suporta versão mínima do iOS: 8.0
-- Usa um arquivo .gitignore no seu repositório.
-- Usa Storyboard e Autolayout (suporta todas as telas de iPhones)
-- Suporta orientações Portrait/Landscape.
-- Usa CocoaPods
-- Usa Alamofire para networking e AlamofireImages para o cache de imagens
-- Faz parse de JSON -> Objeto
-
-- Clean-Architecture
-- Testes unitários com mocks utilizando XCTest Framework
-- Testes funcionais de interface utilizando XCTest
-- Apresenta bom desempenho de memória e processamento (testes com Instruments)
-- Documentação em código e versionamento seguindo boas práticas
-- Interface personalizada deixando app mais fluido
+### Funcionalidades implementadas
+1. Checa se tem conexão com internet.
+1. Caso haja falha na request, avisa a falha.
+1. Cache de imagens
+1. Scroll infinito
+1. Suporta versão mínima do iOS: 8.0
+1. Usa um arquivo .gitignore no seu repositório.
+1. Usa Storyboard e Autolayout (suporta todas as telas de iPhones)
+1. Suporta orientações Portrait/Landscape.
+1. Usa CocoaPods
+1. Usa Alamofire para networking e AlamofireImages para o cache de imagens
+1. Faz parse de JSON -> Objeto
+1. Clean-Architecture
+1. Testes unitários com mocks utilizando XCTest Framework
+1. Testes funcionais de interface utilizando XCTest
+1. Apresenta bom desempenho de memória e processamento (testes com Instruments)
+1. Documentação em código e versionamento seguindo boas práticas
+1. Interface personalizada deixando app mais fluido
 
