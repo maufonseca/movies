@@ -1,5 +1,5 @@
 
-# Movies Demo App - iOS <img src="img/logo.png" width="56px">
+# Movies Demo App - iOS <img src="img/logo.png" width="32px">
 
 ---
 
@@ -7,7 +7,7 @@ Este aplicativo consome uma API com os filmes mais aclamados da atualidade e exi
 
 ### Linguagem utilizada
 
-- Swift 4.2 <img src="img/swift.png" width="32px">
+- Swift 4.2 <img src="img/swift.png" width="24px">
 
 
 ### Instalação
