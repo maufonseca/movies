@@ -1,12 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14113" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14113" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
-        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <objects>
@@ -19,42 +18,42 @@
                 <rect key="frame" x="0.0" y="0.0" width="265" height="274"/>
                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                 <subviews>
-                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillProportionally" translatesAutoresizingMaskIntoConstraints="NO" id="ixu-O6-beD">
-                        <rect key="frame" x="8" y="8" width="249" height="258"/>
-                        <subviews>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="07f-nI-Uak">
-                                <rect key="frame" x="0.0" y="0.0" width="249" height="202"/>
-                            </imageView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="ssc-yT-vg4">
-                                <rect key="frame" x="0.0" y="202" width="249" height="32"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="32" id="jVN-oV-Z0f"/>
-                                </constraints>
-                                <fontDescription key="fontDescription" name="Arial-BoldMT" family="Arial" pointSize="14"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="AOA-Ny-iXi">
-                                <rect key="frame" x="0.0" y="234" width="249" height="24"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="24" id="iFK-yZ-8qa"/>
-                                </constraints>
-                                <fontDescription key="fontDescription" name="ArialMT" family="Arial" pointSize="14"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                        </subviews>
-                    </stackView>
+                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="07f-nI-Uak">
+                        <rect key="frame" x="8" y="8" width="249" height="210"/>
+                    </imageView>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="AOA-Ny-iXi">
+                        <rect key="frame" x="8" y="250" width="249" height="24"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="24" id="iFK-yZ-8qa"/>
+                        </constraints>
+                        <fontDescription key="fontDescription" name="ArialMT" family="Arial" pointSize="14"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="ssc-yT-vg4">
+                        <rect key="frame" x="8" y="218" width="249" height="32"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="32" id="jVN-oV-Z0f"/>
+                        </constraints>
+                        <fontDescription key="fontDescription" name="Arial-BoldMT" family="Arial" pointSize="14"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
                 </subviews>
             </view>
             <color key="backgroundColor" red="0.96470588239999999" green="0.97254901959999995" blue="0.97647058819999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
             <constraints>
-                <constraint firstAttribute="bottom" secondItem="ixu-O6-beD" secondAttribute="bottom" constant="8" id="9ZP-cw-unm"/>
-                <constraint firstAttribute="trailing" secondItem="ixu-O6-beD" secondAttribute="trailing" constant="8" id="Cbv-r6-sWT"/>
-                <constraint firstItem="ixu-O6-beD" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" constant="8" id="JF6-j0-uep"/>
-                <constraint firstItem="ixu-O6-beD" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" constant="8" id="XAF-WK-J4w"/>
+                <constraint firstAttribute="trailing" secondItem="07f-nI-Uak" secondAttribute="trailing" constant="8" id="Amb-lb-7es"/>
+                <constraint firstItem="ssc-yT-vg4" firstAttribute="top" secondItem="07f-nI-Uak" secondAttribute="bottom" id="F8D-jN-Erh"/>
+                <constraint firstAttribute="trailing" secondItem="ssc-yT-vg4" secondAttribute="trailing" constant="8" id="KCK-H7-LCM"/>
+                <constraint firstItem="AOA-Ny-iXi" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" constant="8" id="R6F-FE-3Au"/>
+                <constraint firstItem="07f-nI-Uak" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" constant="8" id="aOT-cr-RTV"/>
+                <constraint firstItem="ssc-yT-vg4" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" constant="8" id="b8r-DH-UfU"/>
+                <constraint firstAttribute="trailing" secondItem="AOA-Ny-iXi" secondAttribute="trailing" constant="8" id="egK-kZ-VTB"/>
+                <constraint firstAttribute="bottom" secondItem="AOA-Ny-iXi" secondAttribute="bottom" id="f6b-a4-R25"/>
+                <constraint firstItem="AOA-Ny-iXi" firstAttribute="top" secondItem="ssc-yT-vg4" secondAttribute="bottom" id="uYc-P2-qXT"/>
+                <constraint firstItem="07f-nI-Uak" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" constant="8" id="wla-Im-u2W"/>
             </constraints>
-            <viewLayoutGuide key="safeArea" id="ZTg-uK-7eu"/>
             <size key="customSize" width="265" height="339"/>
             <connections>
                 <outlet property="imageView" destination="07f-nI-Uak" id="13d-k6-fc2"/>

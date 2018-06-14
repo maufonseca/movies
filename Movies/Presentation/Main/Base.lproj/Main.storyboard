@@ -1,14 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14113" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="4FM-Qk-Rll">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14113" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="4FM-Qk-Rll">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
+        <capability name="Alignment constraints with different attributes" minToolsVersion="5.1"/>
         <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
         <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
-        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -16,6 +16,10 @@
         <scene sceneID="hNz-n2-bh7">
             <objects>
                 <viewController id="9pv-A4-QxB" customClass="HomeViewController" customModule="Movies" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="MYj-mu-KzP"/>
+                        <viewControllerLayoutGuide type="bottom" id="SkK-Em-rjB"/>
+                    </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="tsR-hK-woN">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -56,15 +60,14 @@
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
-                            <constraint firstItem="PQr-Ze-W5v" firstAttribute="trailing" secondItem="k3M-vQ-cJ5" secondAttribute="trailing" id="03T-gA-DVe"/>
-                            <constraint firstItem="TZp-x6-1zZ" firstAttribute="top" secondItem="PQr-Ze-W5v" secondAttribute="top" id="IDE-9h-6QM"/>
+                            <constraint firstAttribute="trailing" secondItem="k3M-vQ-cJ5" secondAttribute="trailing" id="03T-gA-DVe"/>
+                            <constraint firstItem="TZp-x6-1zZ" firstAttribute="top" secondItem="MYj-mu-KzP" secondAttribute="bottom" id="IDE-9h-6QM"/>
                             <constraint firstItem="k3M-vQ-cJ5" firstAttribute="top" secondItem="tsR-hK-woN" secondAttribute="top" id="LYd-WS-fAf"/>
-                            <constraint firstItem="PQr-Ze-W5v" firstAttribute="trailing" secondItem="TZp-x6-1zZ" secondAttribute="trailing" id="W64-cc-e4k"/>
-                            <constraint firstItem="PQr-Ze-W5v" firstAttribute="bottom" secondItem="TZp-x6-1zZ" secondAttribute="bottom" id="oWq-rf-Vqd"/>
-                            <constraint firstItem="k3M-vQ-cJ5" firstAttribute="leading" secondItem="PQr-Ze-W5v" secondAttribute="leading" id="qEE-4d-k0v"/>
-                            <constraint firstItem="TZp-x6-1zZ" firstAttribute="leading" secondItem="PQr-Ze-W5v" secondAttribute="leading" id="vkA-XS-l9e"/>
+                            <constraint firstAttribute="trailing" secondItem="TZp-x6-1zZ" secondAttribute="trailing" id="W64-cc-e4k"/>
+                            <constraint firstItem="SkK-Em-rjB" firstAttribute="top" secondItem="TZp-x6-1zZ" secondAttribute="bottom" id="oWq-rf-Vqd"/>
+                            <constraint firstItem="k3M-vQ-cJ5" firstAttribute="leading" secondItem="tsR-hK-woN" secondAttribute="leading" id="qEE-4d-k0v"/>
+                            <constraint firstItem="TZp-x6-1zZ" firstAttribute="leading" secondItem="tsR-hK-woN" secondAttribute="leading" id="vkA-XS-l9e"/>
                         </constraints>
-                        <viewLayoutGuide key="safeArea" id="PQr-Ze-W5v"/>
                     </view>
                     <tabBarItem key="tabBarItem" title="Movies" image="home" id="acW-dT-cKf"/>
                     <nil key="simulatedTopBarMetrics"/>
@@ -81,6 +84,10 @@
         <scene sceneID="wg7-f3-ORb">
             <objects>
                 <viewController id="8rJ-Kc-sve" customClass="BookmarkViewController" customModule="Movies" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="W7P-p4-nB9"/>
+                        <viewControllerLayoutGuide type="bottom" id="0fS-Bl-NU6"/>
+                    </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="QS5-Rx-YEW">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -121,15 +128,14 @@
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
-                            <constraint firstItem="O1u-W8-tvY" firstAttribute="bottom" secondItem="Kmu-EL-fll" secondAttribute="bottom" id="36r-rK-tYP"/>
-                            <constraint firstItem="Kmu-EL-fll" firstAttribute="leading" secondItem="O1u-W8-tvY" secondAttribute="leading" id="3Ea-RT-Eh5"/>
+                            <constraint firstItem="0fS-Bl-NU6" firstAttribute="top" secondItem="Kmu-EL-fll" secondAttribute="bottom" id="36r-rK-tYP"/>
+                            <constraint firstItem="Kmu-EL-fll" firstAttribute="leading" secondItem="QS5-Rx-YEW" secondAttribute="leading" id="3Ea-RT-Eh5"/>
                             <constraint firstItem="FCa-yO-a0U" firstAttribute="top" secondItem="QS5-Rx-YEW" secondAttribute="top" id="5FR-D0-GRZ"/>
-                            <constraint firstItem="Kmu-EL-fll" firstAttribute="top" secondItem="O1u-W8-tvY" secondAttribute="top" id="Fu9-CT-MXI"/>
-                            <constraint firstItem="FCa-yO-a0U" firstAttribute="leading" secondItem="O1u-W8-tvY" secondAttribute="leading" id="RKP-qh-PEk"/>
-                            <constraint firstItem="FCa-yO-a0U" firstAttribute="trailing" secondItem="O1u-W8-tvY" secondAttribute="trailing" id="Tnm-Qk-Vob"/>
-                            <constraint firstItem="O1u-W8-tvY" firstAttribute="trailing" secondItem="Kmu-EL-fll" secondAttribute="trailing" id="r2g-A8-3jP"/>
+                            <constraint firstItem="Kmu-EL-fll" firstAttribute="top" secondItem="W7P-p4-nB9" secondAttribute="bottom" id="Fu9-CT-MXI"/>
+                            <constraint firstItem="FCa-yO-a0U" firstAttribute="leading" secondItem="QS5-Rx-YEW" secondAttribute="leading" id="RKP-qh-PEk"/>
+                            <constraint firstItem="FCa-yO-a0U" firstAttribute="trailing" secondItem="QS5-Rx-YEW" secondAttribute="trailing" id="Tnm-Qk-Vob"/>
+                            <constraint firstAttribute="trailing" secondItem="Kmu-EL-fll" secondAttribute="trailing" id="r2g-A8-3jP"/>
                         </constraints>
-                        <viewLayoutGuide key="safeArea" id="O1u-W8-tvY"/>
                     </view>
                     <tabBarItem key="tabBarItem" title="Bookmarks" image="bookmarks" id="cPa-gy-q4n"/>
                     <connections>
@@ -145,6 +151,10 @@
         <scene sceneID="dgf-96-5pk">
             <objects>
                 <viewController id="fYj-Lg-za3" customClass="DetailViewController" customModule="Movies" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="SiN-gN-fax"/>
+                        <viewControllerLayoutGuide type="bottom" id="bqw-uF-vrP"/>
+                    </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="I85-zd-uDQ">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -253,17 +263,16 @@
                         </subviews>
                         <color key="backgroundColor" red="0.96470588239999999" green="0.97254901959999995" blue="0.97647058819999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
-                            <constraint firstItem="05t-Xg-gl1" firstAttribute="leading" secondItem="wSw-nr-9Dt" secondAttribute="leading" id="82J-N5-3YV"/>
-                            <constraint firstItem="eWo-sL-6Pd" firstAttribute="centerX" secondItem="wSw-nr-9Dt" secondAttribute="centerX" id="Gmp-XX-Dva"/>
+                            <constraint firstItem="05t-Xg-gl1" firstAttribute="leading" secondItem="I85-zd-uDQ" secondAttribute="leading" id="82J-N5-3YV"/>
+                            <constraint firstItem="eWo-sL-6Pd" firstAttribute="centerX" secondItem="I85-zd-uDQ" secondAttribute="centerX" id="Gmp-XX-Dva"/>
                             <constraint firstItem="9pr-ms-TMl" firstAttribute="width" secondItem="I85-zd-uDQ" secondAttribute="width" multiplier="0.35" id="cdy-Dt-o38"/>
                             <constraint firstItem="Kmn-17-s4v" firstAttribute="width" secondItem="I85-zd-uDQ" secondAttribute="width" id="jDz-Oo-EoS"/>
-                            <constraint firstItem="05t-Xg-gl1" firstAttribute="top" secondItem="wSw-nr-9Dt" secondAttribute="top" id="lwj-WZ-tDl"/>
-                            <constraint firstItem="wSw-nr-9Dt" firstAttribute="bottom" secondItem="eWo-sL-6Pd" secondAttribute="bottom" id="ot3-JN-IbQ"/>
+                            <constraint firstItem="05t-Xg-gl1" firstAttribute="top" secondItem="SiN-gN-fax" secondAttribute="bottom" id="lwj-WZ-tDl"/>
+                            <constraint firstItem="bqw-uF-vrP" firstAttribute="top" secondItem="eWo-sL-6Pd" secondAttribute="bottom" id="ot3-JN-IbQ"/>
                             <constraint firstItem="eWo-sL-6Pd" firstAttribute="width" secondItem="I85-zd-uDQ" secondAttribute="width" id="uCZ-PN-ABG"/>
-                            <constraint firstItem="wSw-nr-9Dt" firstAttribute="trailing" secondItem="05t-Xg-gl1" secondAttribute="trailing" id="wLJ-rr-kGP"/>
-                            <constraint firstItem="wSw-nr-9Dt" firstAttribute="bottom" secondItem="05t-Xg-gl1" secondAttribute="bottom" id="xLh-XU-k0w"/>
+                            <constraint firstAttribute="trailing" secondItem="05t-Xg-gl1" secondAttribute="trailing" id="wLJ-rr-kGP"/>
+                            <constraint firstItem="bqw-uF-vrP" firstAttribute="top" secondItem="05t-Xg-gl1" secondAttribute="bottom" id="xLh-XU-k0w"/>
                         </constraints>
-                        <viewLayoutGuide key="safeArea" id="wSw-nr-9Dt"/>
                     </view>
                     <nil key="simulatedTopBarMetrics"/>
                     <connections>
@@ -282,6 +291,10 @@
         <scene sceneID="xyy-Mf-znR">
             <objects>
                 <viewController id="IjV-SR-E35" customClass="BuyViewController" customModule="Movies" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="hfZ-fz-mqv"/>
+                        <viewControllerLayoutGuide type="bottom" id="maU-17-CEK"/>
+                    </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="Iz7-sD-aOg">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -319,7 +332,7 @@
                                                     <action selector="goBack:" destination="IjV-SR-E35" eventType="touchUpInside" id="OUx-Ur-xnU"/>
                                                 </connections>
                                             </button>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Nenhuma opção de compra" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="72n-PH-GgV">
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="No buying options" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="72n-PH-GgV">
                                                 <rect key="frame" x="16" y="160" width="343" height="27"/>
                                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="22"/>
                                                 <color key="textColor" red="0.96470588239999999" green="0.97254901959999995" blue="0.97647058819999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -357,7 +370,6 @@
                             <constraint firstItem="Ls3-gr-AS0" firstAttribute="top" secondItem="Iz7-sD-aOg" secondAttribute="top" id="knk-gi-rgz"/>
                             <constraint firstAttribute="trailing" secondItem="iMt-Nx-zPe" secondAttribute="trailing" id="tmU-I1-qaC"/>
                         </constraints>
-                        <viewLayoutGuide key="safeArea" id="v3E-9b-NVK"/>
                     </view>
                     <connections>
                         <outlet property="backbutton" destination="skB-OX-71h" id="AFp-qL-BDy"/>
@@ -397,6 +409,11 @@
                         <color key="tintColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <color key="barTintColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <color key="selectedImageTintColor" red="0.96470588239999999" green="0.97254901959999995" blue="0.97647058819999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <userDefinedRuntimeAttributes>
+                            <userDefinedRuntimeAttribute type="color" keyPath="tintColor">
+                                <color key="value" red="0.96470588239999999" green="0.97254901959999995" blue="0.97647058819999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            </userDefinedRuntimeAttribute>
+                        </userDefinedRuntimeAttributes>
                     </tabBar>
                     <connections>
                         <segue destination="9pv-A4-QxB" kind="relationship" relationship="viewControllers" id="u7Y-xg-7CH"/>
@@ -414,6 +431,6 @@
         <image name="home" width="24" height="24"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="BlL-7p-45W"/>
+        <segue reference="Mny-Np-bLK"/>
     </inferredMetricsTieBreakers>
 </document>

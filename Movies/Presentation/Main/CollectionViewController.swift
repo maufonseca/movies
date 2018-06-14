@@ -58,9 +58,24 @@ class CollectionViewController: UIViewController, UICollectionViewDelegate, UICo
     return cell
   }
   
-  func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
+  func getCellSizeForPortrait(collectionViewWidth:CGFloat) -> CGSize{
     let width = collectionView.frame.size.width/3-12
     return CGSize(width: width, height: width*16/9)
+  }
+  
+  func getCellSizeForLandscape(collectionViewWidth:CGFloat) -> CGSize{
+    let width = collectionView.frame.size.width/5-20
+    return CGSize(width: width, height: width*16/9)
+  }
+  
+  
+  func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
+    //Depending on device orientation, we will build the collection view
+    if (UIDevice.current.orientation == .portrait) || (UIDevice.current.orientation == .portraitUpsideDown) {
+      return getCellSizeForPortrait(collectionViewWidth: collectionView.frame.size.width)
+    } else {
+      return getCellSizeForLandscape(collectionViewWidth: collectionView.frame.size.width)
+    }
   }
   
   func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
