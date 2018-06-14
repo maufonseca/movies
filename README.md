@@ -1,6 +1,7 @@
-# Movies Demo App - iOS
-
---- 
+<p align="center">
+	# Movies Demo App - iOS
+</p>
+--
 Este aplicativo simplesmente consome uma API com os filmes mais aclamados da atualidade e exibe essas informações aos usuários.
 
 
@@ -9,10 +10,10 @@ Este aplicativo simplesmente consome uma API com os filmes mais aclamados da atu
 </p>
 
 ### Linguagens de programação
-<p align="center">
-	<img src="img/swift.png" width="180px">
-</p>
+
 - Swift 4.2
+<img src="img/swift.png" width="120px">
+
 
 ### Instalação
 - Baixar ou clonar o projeto em um diretório do sistema Mac OS
