@@ -1,5 +1,5 @@
 
-# Movies Demo App - iOS <img src="img/logo.png" width="24px">
+# Movies App - iOS <img src="img/logo.png" width="24px">
 
 Este aplicativo consome uma API com os filmes mais aclamados da atualidade e exibe essas informações aos usuários.
 A intenção é demonstrar o uso da Arquitetura Clean e de Swift 4.2 para estruturação de layout adaptável a diversas dimensões de tela e orientação de dispositivo, chamadas a API REST com biblioteca Alamofire, lida com imagens e cache pela lib AlamofireImages, persistência do modelo de dados com Realm, suporte a sistemas to antigos quanto iOS 8.0, testes de unidade, de interface e localização do idioma para PT-BR.
