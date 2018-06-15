@@ -36,6 +36,8 @@ A intenção é demonstrar o uso da Arquitetura Clean e de Swift 4.2 para estrut
 1. Aperte o botão de `Run` do Xcode para rodar o app em um dispositivo ou simulador com iOS 8.0+
 <img src="img/run.png" width="320">
 
+**Obs:** Não deve ser necessário rodar o comando `pod install` pois os Pods estão armazenados junto com este repositório e estarão pré-configurados
+
 ### Mudando o idioma
 Se a linguagem utilizada para rodar o app for **português-BR** o app ser apresentado em português (inclusive imagens e títulos dos filmes), do contrário, estará em **inglês**.
 - É possivel definir o idioma em que o app rodará editando-se o `Scheme`, ao lado do botão de `Run`
