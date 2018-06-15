@@ -33,8 +33,8 @@ A intenção é demonstrar o uso da Arquitetura Clean e de Swift 4.2 para estrut
 1. Baixe ou clone o projeto em um diretório do sistema MacOS
 1. Abra o arquivo Movies.xcworkspace com o Xcode
 1. Certifique de que o `scheme` selecionado é Movies
-<img src="img/run.png" width="320">
 1. Apertar o botão de `Run` do Xcode para rodar o app em um dispositivo ou simulador com iOS 8.0+
+<img src="img/run.png" width="320">
 
 ### Mudando o idioma
 Se a linguagem utilizada para rodar o app for **português-BR** o app ser apresentado em português (inclusive imagens e títulos dos filmes), do contrário, estará em **inglês**.
