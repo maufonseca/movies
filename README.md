@@ -8,49 +8,7 @@ A intenção é demonstrar o uso da Arquitetura Clean e de Swift 4.2 para estrut
 
 - Swift 4.2 <img src="img/swift.png" width="16px">
 
-
-### Instalar/Rodar
-1. Baixar ou clonar o projeto em um diretório do sistema MacOS
-1. No terminal, ir até o diretório do projeto e digitar >`pod install`
-1. Após a instalação dos Pods, abrir o arquivo Movies.xcworkspace com o Xcode
-1. Apertar o botão de Play para rodar o app em um dispositivo ou simulador com iOS 8.0+
-**Obs:** Se a linguagem do iOS utilizado for português-BR o app ser apresentado em português (inclusive imagens e títulos dos filmes), do contrário, estará em inglês.
-
-### Rodando os testes automáticos
-1. Abrir o projeto no Xcode utilizando os passos acima
-1. É necessário **rodar os testes em um iOS 9+**, independente do app ser compatível com iOS 8+.
-1. Abrir o navegador de testes do Xcode (CMD + 6)
-1. Apertar o botão de play na frente do testes mostrados no navegador de teste
-
-### Descrição
-- O APP tem 3 telas e consome a API do [**themoviedb**]("https://api.themoviedb.org/)
-- A Primeira tela lista todos os filmes da base num scroll infinito
-- A segunda tela mostra o detalhe de algum filme selecionado
-- A terceira levará às opções de compra do filme
-
-### ScreenShots
-Veja abaixo imagens do aplicativo em funcionamento
-
-<img src="img/home.png" width="400"> 
-<img src="img/bookmark.png" width="400"> 
-<img src="img/detail.png" width="400"> 
-<img src="img/buy.png" width="400">                            
-
-
-### Tela de principal/tela de favoritos
-- A aba de filmes consome a API de lista de filmes do themoviedb, retorna todos os filmes paginados de 20 em 20 itens.
-- A aba de favoritos mostra somente os filmes favoritados que permanecem num banco de dados do dispositivo.
-- Scroll inifinito com cache de imagens
-
-### Tela de detalhe do filme
-- Pega as informações do filme usando o ID do mesmo.
-- Usa Realm para favoritar o filme.
-- Checa se filme já está salvo, se estiver, troca botão para remover do favorito.
-
-### Tela de compra do filme
-- Como não há opção de compra nessa API do themoviedb, mostra um empty state.
-
-### Funcionalidades implementadas
+### Características do projeto
 1. Compila sem erros e nem warnings
 1. Checa se tem conexão com internet
 1. Caso haja falha na request, avisa a falha
@@ -70,4 +28,35 @@ Veja abaixo imagens do aplicativo em funcionamento
 1. Apresenta bom desempenho de memória e processamento (testes com Instruments)
 1. Documentação em código e versionamento seguindo boas práticas
 1. Interface deslizável (scrolls) deixando app mais fluido em todas as telas
+
+### Instalar/Rodar
+1. Baixe ou clone o projeto em um diretório do sistema MacOS
+1. Abra o arquivo Movies.xcworkspace com o Xcode
+1. Certifique de que o `scheme` selecionado é Movies
+<img src="img/run.png" width="320">
+1. Apertar o botão de `Run` do Xcode para rodar o app em um dispositivo ou simulador com iOS 8.0+
+
+### Mudando o idioma
+Se a linguagem utilizada para rodar o app for **português-BR** o app ser apresentado em português (inclusive imagens e títulos dos filmes), do contrário, estará em **inglês**.
+- É possivel definir o idioma em que o app rodará editando-se o `Scheme`, ao lado do botão de `Run`
+- É possivel definir o idioma em que o app rodará trocando-se o idioma do sistema, nas **Settings do iOS**
+
+### Descrição do aplicativo
+- O APP tem 3 telas e consome a API do [**themoviedb**]("https://api.themoviedb.org/)
+- A primeira tela em uma tab que lista todos os filmes da base de dados num scroll infinito e possui na segunda aba mostra apenas os filmes favoritos do usuário numa lista persistente do dispositivo.
+<img src="img/home.png" width="400"> 
+<img src="img/bookmark.png" width="400"> 
+- Ao clicar em uma célula de filme, mostra-se o detalhe de algum filme selecionado numa segunda tela. É possível adicionar ou remover um filme como favorito nessa tela. Filmes favoritados persistem num banco de dados local implementado com Realm.
+<img src="img/detail.png" width="400"> 
+- A terceira tela levará às opções de compra do filme.
+<img src="img/buy.png" width="400">
+
+### Rodando os testes automáticos
+1. Abrir o projeto no Xcode utilizando os passos acima
+1. É necessário **rodar os testes em um iOS 9+**
+1. Abrir o navegador de testes do Xcode (CMD + 6)
+1. Apertar o botão de play na frente do testes mostrados no navegador de teste
+<img src="img/tests.png" width="240">
+
+
 
