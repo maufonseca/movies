@@ -14,7 +14,10 @@ class MoviesUITests: XCTestCase {
   override func setUp() {
     super.setUp()
     continueAfterFailure = false
-    XCUIApplication().launch()
+    let app = XCUIApplication()
+    //Testing will be in english to prevent localized string problems
+    app.launchArguments = ["-AppleLanguages", "en"]
+    app.launch()
   }
   
   override func tearDown() {
@@ -22,61 +25,77 @@ class MoviesUITests: XCTestCase {
   }
   
   //This test will keep scrolling the movies for a while. If no error occurs, then it Passed
-  func testInfiniteScroll() {
+  func testAddFavorites() {
     let app = XCUIApplication()
-    let collectionView = app.children(matching: .window).element(boundBy: 0).children(matching: .other).element.children(matching: .other).element.children(matching: .other).element.children(matching: .other).element.children(matching: .other).element.children(matching: .other).element.children(matching: .other).element.children(matching: .collectionView).element
-    
-    for _ in 1...10 {
-      sleep(2)
-      collectionView.swipeUp()
-    }
-    app.collectionViews.children(matching: .cell).element(boundBy:10).children(matching: .other).element.children(matching: .other).element.tap()
-    
+    let tabBarsQuery = app.tabBars
+    let bookmarksButton = tabBarsQuery.buttons.element(at: 1)
+    bookmarksButton.tap()
     let elementsQuery = app.scrollViews.otherElements
-    elementsQuery.buttons["Marcar favorito"].tap()
-    elementsQuery.buttons["Voltar"].tap()
     
-    for _ in 1...10 {
-      sleep(2)
-      collectionView.swipeUp()
+    //remove all bookmarks to start in clean state
+    let firstCell = app.collectionViews.children(matching: .any).element(boundBy: 0) //first cell
+    while firstCell.exists {
+      //enter detail
+      firstCell.tap()
+      //remove first bookmark
+      elementsQuery.buttons["Remove Bookmark"].tap()
+      //back to bookmarks screen
+      let voltarButton = elementsQuery.buttons["Back"]
+      voltarButton.tap()
     }
+    
+    let moviesButton = tabBarsQuery.buttons.element(at: 0)
+    //go to mopvies section
+    moviesButton.tap()
+    //enter first movie details
+    firstCell.tap()
+    //get movie title
+    let movieTitle = app.scrollViews.otherElements.staticTexts.element(at: 0).label
+    //add movie to bookmark
+    elementsQuery.buttons["Add Bookmark"].tap()
+    //go back to collection view
+    elementsQuery.buttons["Back"].tap()
+    //enter bookmarks section
+    bookmarksButton.tap()
+    //enter first bookmark details
+    firstCell.tap()
+    //get bookmark title
+    let bookmarkTitle = app.scrollViews.otherElements.staticTexts.element(at: 0).label
+    //check if bookmark movie is the same movie added to bookmarks
+    XCTAssert(bookmarkTitle == movieTitle)
     
   }
   
   //This test will make some actions through whole app, if no crashes occurs, then it passed
-  func testAllActions() {
+  func testAllScreens() {
+    
     let app = XCUIApplication()
-    let collectionViewsQuery = app.collectionViews
-    collectionViewsQuery.children(matching: .cell).element(boundBy: 8).children(matching: .other).element.children(matching: .other).element.tap()
-    
-    let scrollViewsQuery = app.scrollViews
-    let elementsQuery = scrollViewsQuery.otherElements
-    let marcarFavoritoButton = elementsQuery.buttons["Marcar favorito"]
-    marcarFavoritoButton.tap()
-    let desmarcarFavoritoButton = elementsQuery.buttons["Desmarcar favorito"]
-    desmarcarFavoritoButton.tap()
-    marcarFavoritoButton.tap()
-    desmarcarFavoritoButton.tap()
-    
-    let comprarButton = app.buttons["Comprar"]
-    comprarButton.tap()
-    
-    let voltarButton = elementsQuery.buttons["Voltar"]
-    voltarButton.tap()
-    voltarButton.tap()
-    
     let tabBarsQuery = app.tabBars
-    let filmesButton = tabBarsQuery.buttons["Filmes"]
-    tabBarsQuery.buttons["Favoritos"].tap()
-    sleep(2)
-    collectionViewsQuery.children(matching: .cell).element(boundBy: 0).children(matching: .other).element.children(matching: .other).element.tap()
-    desmarcarFavoritoButton.tap()
-    marcarFavoritoButton.tap()
-    comprarButton.tap()
-    scrollViewsQuery.otherElements.containing(.button, identifier:"Voltar").element.tap()
-    voltarButton.tap()
-    voltarButton.tap()
-    filmesButton.tap()
+    
+    
+    let bookmarkButton = tabBarsQuery.buttons.element(at: 1) //bookmark button
+    bookmarkButton.tap()
+    
+    let moviesButton = tabBarsQuery.buttons.element(at: 0) //movies button
+    moviesButton.tap()
+    
+    let firstCell = app.collectionViews.children(matching: .any).element(boundBy: 0) //first cell
+    if firstCell.exists {
+      firstCell.tap()
+    }
+    
+    let buyButton = app.buttons["Buy"]
+    buyButton.tap()
+    
+    let backButton = app.scrollViews.otherElements.buttons["Back"]
+    backButton.tap()
+    backButton.tap()
+    bookmarkButton.tap()
+    firstCell.tap()
+    buyButton.tap()
+    backButton.tap()
+    backButton.tap()
+    moviesButton.tap()
     
   }
 }
