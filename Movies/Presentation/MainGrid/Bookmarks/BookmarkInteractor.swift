@@ -7,15 +7,18 @@
 //
 
 import Foundation
-class BookmarkInteractor {
+
+class BookmarkInteractor : BookmarkInteractionProtocol {
   
-  let diskOperator : BookmarkDiskOperator?
+  let diskOperator : DiskWorkerProtocol?
   
-  init(diskOperator:BookmarkDiskOperator) {
+  init(diskOperator:DiskWorkerProtocol) {
     self.diskOperator = diskOperator
   }
   
-  func loadBookmarks(presenter:BookmarkPresenter){
+  //MARK: Bookmark Interactor Protocol
+  
+  func loadBookmarks(presenter:MovieGridPresentationProtocol){
     print("requesting bookmarks")
     diskOperator?.getBookmarkList(presenter:presenter)
   }

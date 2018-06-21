@@ -9,14 +9,14 @@
 import Foundation
 import RealmSwift
 
-class BookmarkDiskOperator {
+class BookmarkDiskOperator : DiskWorkerProtocol {
   
   let realm = try! Realm()
   
   init() {
   }
   
-  func getBookmarkList(presenter : BookmarkPresenter) {
+  func getBookmarkList(presenter : MovieGridPresentationProtocol) {
     // Query Realm for all bookmarks
     var responseArray : Array<Movie> = []
     let bookmarks = realm.objects(Movie.self)
@@ -54,6 +54,4 @@ class BookmarkDiskOperator {
     print("Realm bookmarks matches: \(bookmarks.count)")
     return bookmarks.count > 0 ? true:false
   }
-
-
 }

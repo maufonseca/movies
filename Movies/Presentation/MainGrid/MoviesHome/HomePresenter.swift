@@ -8,12 +8,14 @@
 
 import Foundation
 
-class HomePresenter {
-  var controller : HomeViewController
+class HomePresenter : MovieGridPresentationProtocol {
+  var controller : InfiniteScrollDisplayProtocol
 
-  init(controller:HomeViewController) {
+  init(controller:InfiniteScrollDisplayProtocol) {
     self.controller = controller
   }
+  
+  //MARK: Presentation protocol
   
   func updateMoviesArray(array:Array<Movie>) {
     controller.updateMovieList(array: array)

@@ -9,9 +9,10 @@
 import UIKit
 import Alamofire
 import AlamofireImage
+import MaterialComponents.MaterialSnackbar
 
-class CollectionViewController: UIViewController, UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout {
-  
+class CollectionViewController: UIViewController, UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout, MovieGridDisplayProtocol {
+
   var collectionView: UICollectionView!
   var movies : Array<Movie> = []
   
@@ -20,20 +21,21 @@ class CollectionViewController: UIViewController, UICollectionViewDelegate, UICo
     collectionView.register(UINib.init(nibName: "MovieCollectionViewCell", bundle: nil), forCellWithReuseIdentifier: "movieCell")
   }
   
+  //MARK: Grid Display Protocol
+  
+  func showMessage(message: String){
+    let snackMessage = MDCSnackbarMessage()
+    snackMessage.text = message
+    MDCSnackbarManager.show(snackMessage)
+  }
+  
   func updateMovieList(array:Array<Movie>) {
     self.movies = array
     self.collectionView.reloadData()
   }
   
-  override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-    if(segue.identifier == "detailSegue") {
-      let tappedMovie = sender as! Movie
-      let vc = segue.destination as! DetailViewController
-      vc.currentMovie = tappedMovie
-    }
-  }
+  //MARK: COLLECTIONVIEW SOURCE
   
-  // COLLECTIONVIEW SOURCE
   func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
     return movies.count
   }
@@ -81,4 +83,15 @@ class CollectionViewController: UIViewController, UICollectionViewDelegate, UICo
   func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
     performSegue(withIdentifier: "detailSegue", sender: movies[indexPath.row])
   }
+  
+  //MARK: Navigation
+  
+  override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+    if(segue.identifier == "detailSegue") {
+      let tappedMovie = sender as! Movie
+      let vc = segue.destination as! DetailViewController
+      vc.currentMovie = tappedMovie
+    }
+  }
+  
 }

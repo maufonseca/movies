@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		270239AB20DC191C00439203 /* MoviesProtocols.swift in Sources */ = {isa = PBXBuildFile; fileRef = 270239AA20DC191C00439203 /* MoviesProtocols.swift */; };
+		270239AD20DC28E700439203 /* DiskProtocols.swift in Sources */ = {isa = PBXBuildFile; fileRef = 270239AC20DC28E700439203 /* DiskProtocols.swift */; };
+		270239AF20DC28F500439203 /* NetworkProtocols.swift in Sources */ = {isa = PBXBuildFile; fileRef = 270239AE20DC28F500439203 /* NetworkProtocols.swift */; };
+		270239B020DC2A1100439203 /* MovieCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 270239B220DC2A1100439203 /* MovieCollectionViewCell.xib */; };
 		2729500E20CEC7BF00C6DBC2 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2729500D20CEC7BF00C6DBC2 /* Constants.swift */; };
 		273EF10120D1A69E0019C0EE /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 273EF0FF20D1A69E0019C0EE /* Localizable.strings */; };
 		273EF10420D1B3EF0019C0EE /* BookmarkInteractorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 273EF10320D1B3EF0019C0EE /* BookmarkInteractorTests.swift */; };
@@ -23,7 +27,6 @@
 		276A9F1820CABE69003B0626 /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 276A9F1720CABE69003B0626 /* DetailViewController.swift */; };
 		276A9F1F20CAC18D003B0626 /* Movie.swift in Sources */ = {isa = PBXBuildFile; fileRef = 276A9F1E20CAC18D003B0626 /* Movie.swift */; };
 		276A9F2220CAC418003B0626 /* MovieCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 276A9F2020CAC418003B0626 /* MovieCollectionViewCell.swift */; };
-		276A9F2320CAC418003B0626 /* MovieCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 276A9F2120CAC418003B0626 /* MovieCollectionViewCell.xib */; };
 		276A9F2F20CAD683003B0626 /* MoviesRequester.swift in Sources */ = {isa = PBXBuildFile; fileRef = 276A9F2E20CAD683003B0626 /* MoviesRequester.swift */; };
 		276A9F3120CADB1A003B0626 /* HomePresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 276A9F3020CADB1A003B0626 /* HomePresenter.swift */; };
 		276A9F3520CADB63003B0626 /* HomeInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 276A9F3420CADB63003B0626 /* HomeInteractor.swift */; };
@@ -57,6 +60,11 @@
 /* Begin PBXFileReference section */
 		12093C62CC1CEAB349B544E1 /* Pods_MoviesTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MoviesTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		1FB1DFE74DDBF5AD51B31DB1 /* Pods-MoviesTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MoviesTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-MoviesTests/Pods-MoviesTests.release.xcconfig"; sourceTree = "<group>"; };
+		270239AA20DC191C00439203 /* MoviesProtocols.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoviesProtocols.swift; sourceTree = "<group>"; };
+		270239AC20DC28E700439203 /* DiskProtocols.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DiskProtocols.swift; sourceTree = "<group>"; };
+		270239AE20DC28F500439203 /* NetworkProtocols.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkProtocols.swift; sourceTree = "<group>"; };
+		270239B120DC2A1100439203 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/MovieCollectionViewCell.xib; sourceTree = "<group>"; };
+		270239B420DC2A1900439203 /* pt-BR */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "pt-BR"; path = "pt-BR.lproj/MovieCollectionViewCell.strings"; sourceTree = "<group>"; };
 		2729500D20CEC7BF00C6DBC2 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		273EF0F820D19BF80019C0EE /* pt-BR */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "pt-BR"; path = "pt-BR.lproj/Main.strings"; sourceTree = "<group>"; };
 		273EF10020D1A69E0019C0EE /* Base */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = Base; path = Base.lproj/Localizable.strings; sourceTree = "<group>"; };
@@ -81,7 +89,6 @@
 		276A9F1720CABE69003B0626 /* DetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
 		276A9F1E20CAC18D003B0626 /* Movie.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Movie.swift; sourceTree = "<group>"; };
 		276A9F2020CAC418003B0626 /* MovieCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieCollectionViewCell.swift; sourceTree = "<group>"; };
-		276A9F2120CAC418003B0626 /* MovieCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MovieCollectionViewCell.xib; sourceTree = "<group>"; };
 		276A9F2E20CAD683003B0626 /* MoviesRequester.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoviesRequester.swift; sourceTree = "<group>"; };
 		276A9F3020CADB1A003B0626 /* HomePresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomePresenter.swift; sourceTree = "<group>"; };
 		276A9F3420CADB63003B0626 /* HomeInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeInteractor.swift; sourceTree = "<group>"; };
@@ -181,20 +188,20 @@
 			path = MoviesUITests;
 			sourceTree = "<group>";
 		};
-		276A9F0B20CAB0FF003B0626 /* Home */ = {
+		276A9F0B20CAB0FF003B0626 /* MoviesHome */ = {
 			isa = PBXGroup;
 			children = (
 				276A9EDD20CAADB7003B0626 /* HomeViewController.swift */,
 				276A9F3420CADB63003B0626 /* HomeInteractor.swift */,
 				276A9F3020CADB1A003B0626 /* HomePresenter.swift */,
 			);
-			path = Home;
+			path = MoviesHome;
 			sourceTree = "<group>";
 		};
 		276A9F0C20CAB169003B0626 /* Presentation */ = {
 			isa = PBXGroup;
 			children = (
-				27ED82B620CF80AC00CDBD35 /* Main */,
+				27ED82B620CF80AC00CDBD35 /* MainGrid */,
 				276A9F0F20CAB1D9003B0626 /* Detail */,
 				276A9F1420CAB5B7003B0626 /* Buy */,
 			);
@@ -209,14 +216,14 @@
 			path = Domain;
 			sourceTree = "<group>";
 		};
-		276A9F0E20CAB1D1003B0626 /* Bookmark */ = {
+		276A9F0E20CAB1D1003B0626 /* Bookmarks */ = {
 			isa = PBXGroup;
 			children = (
 				276A9EDF20CAADB7003B0626 /* BookmarkViewController.swift */,
 				27ED82B220CF546C00CDBD35 /* BookmarkInteractor.swift */,
 				27ED82B020CF532D00CDBD35 /* BookmarkPresenter.swift */,
 			);
-			path = Bookmark;
+			path = Bookmarks;
 			sourceTree = "<group>";
 		};
 		276A9F0F20CAB1D9003B0626 /* Detail */ = {
@@ -239,6 +246,7 @@
 		276A9F1120CAB215003B0626 /* Network */ = {
 			isa = PBXGroup;
 			children = (
+				270239AE20DC28F500439203 /* NetworkProtocols.swift */,
 				276A9F2E20CAD683003B0626 /* MoviesRequester.swift */,
 				276F778820D0531B00B7D6CD /* ReachabilityWorker.swift */,
 			);
@@ -248,6 +256,7 @@
 		276A9F1220CAB21F003B0626 /* Disk */ = {
 			isa = PBXGroup;
 			children = (
+				270239AC20DC28E700439203 /* DiskProtocols.swift */,
 				27ED82AE20CF52D900CDBD35 /* BookmarkDiskOperator.swift */,
 			);
 			path = Disk;
@@ -273,17 +282,18 @@
 			path = Buy;
 			sourceTree = "<group>";
 		};
-		27ED82B620CF80AC00CDBD35 /* Main */ = {
+		27ED82B620CF80AC00CDBD35 /* MainGrid */ = {
 			isa = PBXGroup;
 			children = (
-				276A9F0B20CAB0FF003B0626 /* Home */,
-				276A9F0E20CAB1D1003B0626 /* Bookmark */,
-				276A9F2020CAC418003B0626 /* MovieCollectionViewCell.swift */,
-				276A9F2120CAC418003B0626 /* MovieCollectionViewCell.xib */,
-				27ED82B420CF7D7400CDBD35 /* CollectionViewController.swift */,
+				276A9F0B20CAB0FF003B0626 /* MoviesHome */,
+				276A9F0E20CAB1D1003B0626 /* Bookmarks */,
 				276A9EE120CAADB9003B0626 /* Main.storyboard */,
+				270239B220DC2A1100439203 /* MovieCollectionViewCell.xib */,
+				270239AA20DC191C00439203 /* MoviesProtocols.swift */,
+				27ED82B420CF7D7400CDBD35 /* CollectionViewController.swift */,
+				276A9F2020CAC418003B0626 /* MovieCollectionViewCell.swift */,
 			);
-			path = Main;
+			path = MainGrid;
 			sourceTree = "<group>";
 		};
 		8094270D9CE4CC9A49FC25E0 /* Frameworks */ = {
@@ -422,7 +432,7 @@
 				276A9EE820CAADDA003B0626 /* LaunchScreen.storyboard in Resources */,
 				276A9EE520CAADDA003B0626 /* Assets.xcassets in Resources */,
 				276A9EE320CAADB9003B0626 /* Main.storyboard in Resources */,
-				276A9F2320CAC418003B0626 /* MovieCollectionViewCell.xib in Resources */,
+				270239B020DC2A1100439203 /* MovieCollectionViewCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -544,9 +554,12 @@
 				276A9F1820CABE69003B0626 /* DetailViewController.swift in Sources */,
 				276A9F2220CAC418003B0626 /* MovieCollectionViewCell.swift in Sources */,
 				27ED82B520CF7D7400CDBD35 /* CollectionViewController.swift in Sources */,
+				270239AB20DC191C00439203 /* MoviesProtocols.swift in Sources */,
 				27ED82AF20CF52D900CDBD35 /* BookmarkDiskOperator.swift in Sources */,
 				276A9EDC20CAADB7003B0626 /* AppDelegate.swift in Sources */,
 				276A9F2F20CAD683003B0626 /* MoviesRequester.swift in Sources */,
+				270239AD20DC28E700439203 /* DiskProtocols.swift in Sources */,
+				270239AF20DC28F500439203 /* NetworkProtocols.swift in Sources */,
 				276A9EDE20CAADB7003B0626 /* HomeViewController.swift in Sources */,
 				276F778920D0531B00B7D6CD /* ReachabilityWorker.swift in Sources */,
 				27ED82B320CF546C00CDBD35 /* BookmarkInteractor.swift in Sources */,
@@ -587,6 +600,15 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
+		270239B220DC2A1100439203 /* MovieCollectionViewCell.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				270239B120DC2A1100439203 /* Base */,
+				270239B420DC2A1900439203 /* pt-BR */,
+			);
+			name = MovieCollectionViewCell.xib;
+			sourceTree = "<group>";
+		};
 		273EF0FF20D1A69E0019C0EE /* Localizable.strings */ = {
 			isa = PBXVariantGroup;
 			children = (

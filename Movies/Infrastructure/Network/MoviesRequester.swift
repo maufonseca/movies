@@ -9,10 +9,10 @@
 import Foundation
 import Alamofire
 
-class MoviesRequester {
-  let presenter : HomePresenter
+class MoviesRequester : NetworkRequestProtocol {
+  let presenter : MovieGridPresentationProtocol
   
-  init(presenter:HomePresenter) {
+  init(presenter:MovieGridPresentationProtocol) {
     self.presenter = presenter
   }
   

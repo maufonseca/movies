@@ -15,7 +15,7 @@ class BookmarkInteractorTests: XCTestCase {
   //Stub classes (mock)
   class MockOperator: BookmarkDiskOperator {
     var called = false
-    override func getBookmarkList(presenter:BookmarkPresenter) {
+    override func getBookmarkList(presenter:MovieGridPresentationProtocol) {
       called = true
     }
   }

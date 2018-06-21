@@ -8,25 +8,27 @@
 
 import Foundation
 
-class HomeInteractor {
+class HomeInteractor : InfiniteScrollInteractionProtocol {
   var currentPage : Int = 0
-  let requester : MoviesRequester?
+  let requester : NetworkRequestProtocol?
   
-  init(requester:MoviesRequester) {
+  init(requester:NetworkRequestProtocol) {
     self.requester = requester
   }
+  
+  //MARK: InfiniteScroll protocol
   
   func requestCurrentPage() {
     print("requesting page: \(currentPage)")
     requester?.requestMovieList(page: currentPage)
   }
   
-  func getNextPage() {
+  func requestNextPage() {
     currentPage+=1
     requestCurrentPage()
   }
   
-  func getPreviousPage() {
+  func requestPreviousPage() {
     if(currentPage>1) {
       currentPage -= 1
       requestCurrentPage()
@@ -35,5 +37,9 @@ class HomeInteractor {
   
   func decreasePage() {
     currentPage -= 1
+  }
+  
+  func getCurrentPage() -> Int {
+    return currentPage
   }
 }
