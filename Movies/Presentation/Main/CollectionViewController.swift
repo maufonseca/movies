@@ -71,10 +71,10 @@ class CollectionViewController: UIViewController, UICollectionViewDelegate, UICo
   
   func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
     //Depending on device orientation, we will build the collection view
-    if (UIDevice.current.orientation == .portrait) || (UIDevice.current.orientation == .portraitUpsideDown) {
-      return getCellSizeForPortrait(collectionViewWidth: collectionView.frame.size.width)
-    } else {
+    if (UIDevice.current.orientation == .landscapeLeft) || (UIDevice.current.orientation == .landscapeRight) {
       return getCellSizeForLandscape(collectionViewWidth: collectionView.frame.size.width)
+    } else {
+      return getCellSizeForPortrait(collectionViewWidth: collectionView.frame.size.width)
     }
   }
   
