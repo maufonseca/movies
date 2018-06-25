@@ -21,8 +21,8 @@ class BookmarkInteractorTests: XCTestCase {
   }
   
   //Objects used for testing
-  var mockOperator : MockOperator?
-  var interactorUnderTest : BookmarkInteractor?
+  var mockOperator : MockOperator!
+  var interactorUnderTest : BookmarkInteractor!
   
   override func setUp() {
     super.setUp()
@@ -38,8 +38,8 @@ class BookmarkInteractorTests: XCTestCase {
   
   func testLoadBookmarks() {
     //When calling the loadBookmarks() method in interactor, the diskOperactor getBookmarkList() should be called
-    interactorUnderTest?.loadBookmarks(presenter: BookmarkPresenter.init(controller: BookmarkViewController.init()))
-    XCTAssertTrue(mockOperator!.called)
+    interactorUnderTest.loadBookmarks(presenter: BookmarkPresenter.init(controller: BookmarkViewController.init()))
+    XCTAssertTrue(mockOperator.called)
   }
   
 }

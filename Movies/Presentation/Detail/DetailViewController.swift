@@ -60,12 +60,12 @@ class DetailViewController: UIViewController {
   
   func removeBookmark() {
     diskOperator.removeBookmark(id: currentMovie.id)
-    currentMovie?.bookmarked = false
+    currentMovie.bookmarked = false
     setupAddBookmarkButton()
   }
   
   func addBookmark() {
-    currentMovie?.bookmarked = true
+    currentMovie.bookmarked = true
     diskOperator.addBookmark(bookmark: currentMovie)
     setupRemoveBookmarkButton()
   }

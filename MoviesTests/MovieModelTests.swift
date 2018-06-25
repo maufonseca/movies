@@ -11,7 +11,7 @@ import XCTest
 
 class MovieModelTests: XCTestCase {
   
-  var movieUnderTest : Movie?
+  var movieUnderTest : Movie!
   
   override func setUp() {
     super.setUp()
@@ -24,17 +24,17 @@ class MovieModelTests: XCTestCase {
   }
   
   func testYearReturn() {
-    movieUnderTest?.releaseDate = "2016-2-2"
-    var year = movieUnderTest?.getReleaseYear()
-    XCTAssert(year!=="2016")
+    movieUnderTest.releaseDate = "2016-2-2"
+    var year = movieUnderTest.getReleaseYear()
+    XCTAssert(year=="2016")
     
-    movieUnderTest?.releaseDate = "2006/12/12"
-    year = movieUnderTest?.getReleaseYear()
-    XCTAssert(year!=="2006")
+    movieUnderTest.releaseDate = "2006/12/12"
+    year = movieUnderTest.getReleaseYear()
+    XCTAssert(year=="2006")
     
-    movieUnderTest?.releaseDate = "1998-2-12"
-    year = movieUnderTest?.getReleaseYear()
-    XCTAssert(year!=="1998")
+    movieUnderTest.releaseDate = "1998-2-12"
+    year = movieUnderTest.getReleaseYear()
+    XCTAssert(year=="1998")
     
   }
   
@@ -45,11 +45,11 @@ class MovieModelTests: XCTestCase {
     let nsDict = dict as NSDictionary
     
     movieUnderTest = Movie.init(fromDictionary: nsDict)
-    XCTAssert(movieUnderTest?.id == 351286)
-    XCTAssert(movieUnderTest?.title == "Jurassic World: Reino Ameaçado")
-    XCTAssert(movieUnderTest?.bookmarked == false)
-    XCTAssert(movieUnderTest?.getReleaseYear()=="2018")
-    XCTAssert(movieUnderTest?.overview == "Quatro anos após o fechamento do Jurassic Park, um vulcão prestes a entrar em erupção põe em risco a vida na ilha Nublar. No local não há mais qualquer presença humana, com os dinossauros vivendo livremente. Diante da situação, é preciso tomar uma decisão: deve-se retornar à ilha para salvar os animais ou abandoná-los para uma nova extinção? Decidida a resgatá-los, Claire (Bryce Dallas Howard) convoca Owen (Chris Pratt) a retornar à ilha com ela.")
+    XCTAssert(movieUnderTest.id == 351286)
+    XCTAssert(movieUnderTest.title == "Jurassic World: Reino Ameaçado")
+    XCTAssert(movieUnderTest.bookmarked == false)
+    XCTAssert(movieUnderTest.getReleaseYear()=="2018")
+    XCTAssert(movieUnderTest.overview == "Quatro anos após o fechamento do Jurassic Park, um vulcão prestes a entrar em erupção põe em risco a vida na ilha Nublar. No local não há mais qualquer presença humana, com os dinossauros vivendo livremente. Diante da situação, é preciso tomar uma decisão: deve-se retornar à ilha para salvar os animais ou abandoná-los para uma nova extinção? Decidida a resgatá-los, Claire (Bryce Dallas Howard) convoca Owen (Chris Pratt) a retornar à ilha com ela.")
   }
   
   
