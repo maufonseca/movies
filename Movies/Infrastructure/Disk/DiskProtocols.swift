@@ -9,8 +9,8 @@
 import Foundation
 
 protocol DiskWorkerProtocol {
-  func getBookmarkList(presenter : MovieGridPresentationProtocol)
-  func addBookmark(bookmark:Movie)
-  func removeBookmark(id:Int)
-  func isBookmarked(id:Int) -> Bool
+  func getBookmarkList(presenter: MovieGridPresentationProtocol)
+  func addBookmark(bookmark: Movie)
+  func removeBookmark(id: Int)
+  func isBookmarked(id: Int) -> Bool
 }

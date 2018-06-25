@@ -14,11 +14,11 @@ import MaterialComponents.MaterialSnackbar
 class CollectionViewController: UIViewController, UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout, MovieGridDisplayProtocol {
 
   var collectionView: UICollectionView!
-  var movies : Array<Movie> = []
+  var movies: Array<Movie> = []
   
   override func viewDidLoad() {
     super.viewDidLoad()
-    collectionView.register(UINib.init(nibName: "MovieCollectionViewCell", bundle: nil), forCellWithReuseIdentifier: "movieCell")
+    collectionView.register(UINib.init(nibName: "MovieCollectionViewCell", bundle: nil), forCellWithReuseIdentifier:  "movieCell")
   }
   
   //MARK: Grid Display Protocol

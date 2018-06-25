@@ -14,9 +14,9 @@ class HomeViewController: CollectionViewController, InfiniteScrollDisplayProtoco
   
   @IBOutlet var movieCollectionView: UICollectionView!
   
-  var presenter : MovieGridPresentationProtocol!
-  var requester : NetworkRequestProtocol!
-  var interactor : InfiniteScrollInteractionProtocol!
+  var presenter: MovieGridPresentationProtocol!
+  var requester: NetworkRequestProtocol!
+  var interactor: InfiniteScrollInteractionProtocol!
   
   override func viewDidLoad() {
     self.collectionView = movieCollectionView
@@ -42,7 +42,7 @@ class HomeViewController: CollectionViewController, InfiniteScrollDisplayProtoco
   
   //MARK: Grid Display Protocol
   
-  override func updateMovieList(array:Array<Movie>) {
+  override func updateMovieList(array: Array<Movie>) {
     self.movies += array
     self.movieCollectionView.reloadData()
   }

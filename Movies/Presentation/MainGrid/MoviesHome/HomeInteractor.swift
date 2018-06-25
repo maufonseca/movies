@@ -8,11 +8,11 @@
 
 import Foundation
 
-class HomeInteractor : InfiniteScrollInteractionProtocol {
-  var currentPage : Int = 0
-  let requester : NetworkRequestProtocol!
+class HomeInteractor: InfiniteScrollInteractionProtocol {
+  var currentPage: Int = 0
+  let requester: NetworkRequestProtocol!
   
-  init(requester:NetworkRequestProtocol) {
+  init(requester: NetworkRequestProtocol) {
     self.requester = requester
   }
   
@@ -24,12 +24,12 @@ class HomeInteractor : InfiniteScrollInteractionProtocol {
   }
   
   func requestNextPage() {
-    currentPage+=1
+    currentPage += 1
     requestCurrentPage()
   }
   
   func requestPreviousPage() {
-    if(currentPage>1) {
+    if(currentPage > 1) {
       currentPage -= 1
       requestCurrentPage()
     }

@@ -10,13 +10,13 @@ import Foundation
 
 //Rules for presenting a movie collection grid
 protocol MovieGridPresentationProtocol {
-  func updateMoviesArray(array:Array<Movie>)
-  func gotError(message:String)
+  func updateMoviesArray(array: Array<Movie>)
+  func gotError(message: String)
 }
 
 //Rules for displaying a movie collection grid
-protocol MovieGridDisplayProtocol : class { //only classes can implement this
-  func updateMovieList(array:Array<Movie>)
+protocol MovieGridDisplayProtocol: class { //only classes can implement this
+  func updateMovieList(array: Array<Movie>)
   func showMessage(message: String)
 }
 

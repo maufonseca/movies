@@ -8,23 +8,23 @@
 
 import Foundation
 
-class HomePresenter : MovieGridPresentationProtocol {
+class HomePresenter: MovieGridPresentationProtocol {
 
   //weak var to break possible retain cycles
-  weak var controller : InfiniteScrollDisplayProtocol!
+  weak var controller: InfiniteScrollDisplayProtocol!
 
-  init(controller:InfiniteScrollDisplayProtocol) {
+  init(controller: InfiniteScrollDisplayProtocol) {
     self.controller = controller
   }
   
   //MARK: Presentation protocol
   
-  func updateMoviesArray(array:Array<Movie>) {
+  func updateMoviesArray(array: Array<Movie>) {
     controller.updateMovieList(array: array)
   }
   
-  func gotError(message:String) {
-    controller.showMessage(message:message)
+  func gotError(message: String) {
+    controller.showMessage(message: message)
     controller.pauseInfiniteScroll()
   }
 }

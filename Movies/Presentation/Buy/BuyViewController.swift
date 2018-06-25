@@ -14,7 +14,7 @@ class BuyViewController: UIViewController {
   @IBOutlet var backbutton: UIButton!
   @IBOutlet var imageView: UIImageView!
   
-  var currentMovie : Movie!
+  var currentMovie: Movie!
   
   //Changins statusBar text to light
   override var preferredStatusBarStyle: UIStatusBarStyle {

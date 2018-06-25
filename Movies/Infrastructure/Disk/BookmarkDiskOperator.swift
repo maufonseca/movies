@@ -9,16 +9,13 @@
 import Foundation
 import RealmSwift
 
-class BookmarkDiskOperator : DiskWorkerProtocol {
+class BookmarkDiskOperator: DiskWorkerProtocol {
   
   let realm = try! Realm()
   
-  init() {
-  }
-  
-  func getBookmarkList(presenter : MovieGridPresentationProtocol) {
+  func getBookmarkList(presenter: MovieGridPresentationProtocol) {
     // Query Realm for all bookmarks
-    var responseArray : Array<Movie> = []
+    var responseArray: Array<Movie> = []
     let bookmarks = realm.objects(Movie.self)
     print("Realm bookmarks count: \(bookmarks.count)")
     
@@ -31,7 +28,7 @@ class BookmarkDiskOperator : DiskWorkerProtocol {
     presenter.updateMoviesArray(array: responseArray)
   }
   
-  func addBookmark(bookmark:Movie) {
+  func addBookmark(bookmark: Movie) {
     // Save bookmark
     let movie = Movie(value:bookmark) //creating a copy for persistence
     try! realm.write {
@@ -40,7 +37,7 @@ class BookmarkDiskOperator : DiskWorkerProtocol {
     }
   }
   
-  func removeBookmark(id:Int) {
+  func removeBookmark(id: Int) {
     // Remove bookmark by ID
     let theMovie = realm.objects(Movie.self).filter("id == \(id)").first
     try! realm.write {
@@ -48,7 +45,7 @@ class BookmarkDiskOperator : DiskWorkerProtocol {
     }
   }
   
-  func isBookmarked(id:Int) -> Bool {
+  func isBookmarked(id: Int) -> Bool {
     // Find bookmark by ID
     let bookmarks = realm.objects(Movie.self).filter("id == \(id)")
     print("Realm bookmarks matches: \(bookmarks.count)")

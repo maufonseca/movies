@@ -9,13 +9,13 @@
 import Foundation
 import RealmSwift
 
-class Movie : Object {
-  @objc dynamic var id : Int = -1
-  @objc dynamic var title : String = ""
-  @objc dynamic var overview : String = ""
-  @objc dynamic var imageUrl : String = ""
-  @objc dynamic var releaseDate : String = ""
-  @objc dynamic var bookmarked : Bool = false
+class Movie: Object {
+  @objc dynamic var id: Int = -1
+  @objc dynamic var title: String = ""
+  @objc dynamic var overview: String = ""
+  @objc dynamic var imageUrl: String = ""
+  @objc dynamic var releaseDate: String = ""
+  @objc dynamic var bookmarked: Bool = false
   
   convenience init(fromDictionary movieDic: NSDictionary) {
     self.init()

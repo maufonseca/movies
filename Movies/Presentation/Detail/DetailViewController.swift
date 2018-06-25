@@ -17,7 +17,7 @@ class DetailViewController: UIViewController {
   @IBOutlet var descriptionLabel: UILabel!
   @IBOutlet var yearLabel: UILabel!
   
-  var currentMovie : Movie!
+  var currentMovie: Movie!
   var diskOperator = BookmarkDiskOperator.init()
   
   override func viewDidLoad() {

@@ -9,5 +9,5 @@
 import Foundation
 
 protocol NetworkRequestProtocol {
-  func requestMovieList(page : Int)
+  func requestMovieList(page: Int)
 }
