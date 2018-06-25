@@ -13,9 +13,9 @@ import AlamofireImage
 class BookmarkViewController: CollectionViewController {
 
   @IBOutlet var bookmarksCollectionView: UICollectionView!
-  var presenter : BookmarkPresenter?
-  var diskOperator : BookmarkDiskOperator?
-  var interactor : BookmarkInteractor?
+  var presenter : BookmarkPresenter!
+  var diskOperator : BookmarkDiskOperator!
+  var interactor : BookmarkInteractor!
   
   override func viewDidLoad() {
     collectionView = bookmarksCollectionView
@@ -23,12 +23,12 @@ class BookmarkViewController: CollectionViewController {
     
     presenter = BookmarkPresenter.init(controller: self)
     diskOperator = BookmarkDiskOperator.init()
-    interactor = BookmarkInteractor.init(diskOperator: diskOperator!)
+    interactor = BookmarkInteractor.init(diskOperator: diskOperator)
   }
 
   override func viewWillAppear(_ animated: Bool) {
     super.viewWillAppear(animated)
-    interactor?.loadBookmarks(presenter: presenter!)
+    interactor.loadBookmarks(presenter: presenter)
   }
   
 }

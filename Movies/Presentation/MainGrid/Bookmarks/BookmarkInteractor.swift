@@ -10,7 +10,7 @@ import Foundation
 
 class BookmarkInteractor : BookmarkInteractionProtocol {
   
-  let diskOperator : DiskWorkerProtocol?
+  let diskOperator : DiskWorkerProtocol!
   
   init(diskOperator:DiskWorkerProtocol) {
     self.diskOperator = diskOperator
@@ -20,7 +20,7 @@ class BookmarkInteractor : BookmarkInteractionProtocol {
   
   func loadBookmarks(presenter:MovieGridPresentationProtocol){
     print("requesting bookmarks")
-    diskOperator?.getBookmarkList(presenter:presenter)
+    diskOperator.getBookmarkList(presenter:presenter)
   }
   
 }

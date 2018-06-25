@@ -14,9 +14,9 @@ class HomeViewController: CollectionViewController, InfiniteScrollDisplayProtoco
   
   @IBOutlet var movieCollectionView: UICollectionView!
   
-  var presenter : MovieGridPresentationProtocol?
-  var requester : NetworkRequestProtocol?
-  var interactor : InfiniteScrollInteractionProtocol?
+  var presenter : MovieGridPresentationProtocol!
+  var requester : NetworkRequestProtocol!
+  var interactor : InfiniteScrollInteractionProtocol!
   
   override func viewDidLoad() {
     self.collectionView = movieCollectionView
@@ -24,18 +24,18 @@ class HomeViewController: CollectionViewController, InfiniteScrollDisplayProtoco
     
     //setup scene
     presenter = HomePresenter.init(controller: self)
-    requester = MoviesRequester.init(presenter: presenter!)
-    interactor = HomeInteractor.init(requester: requester!)
+    requester = MoviesRequester.init(presenter: presenter)
+    interactor = HomeInteractor.init(requester: requester)
     
-    interactor?.requestNextPage()
+    interactor.requestNextPage()
   }
 
   //Getting scroll position to load more results (infinite scroll)
   func scrollViewDidScroll(_ scrollView: UIScrollView) {
     for cell in self.movieCollectionView.visibleCells {
       let indexPath = self.movieCollectionView.indexPath(for: cell)
-      if((indexPath?.row)! == 20*(interactor?.getCurrentPage())!-5) {
-        interactor?.requestNextPage()
+      if((indexPath?.row)! == 20*(interactor.getCurrentPage())-5) {
+        interactor.requestNextPage()
       }
     }
   }
@@ -50,7 +50,7 @@ class HomeViewController: CollectionViewController, InfiniteScrollDisplayProtoco
   //MARK: Infinite Scroll Display Protocol
   
   func pauseInfiniteScroll() { //in case of error, decrease the page count because call failed
-    interactor?.decreasePage()
+    interactor.decreasePage()
   }
   
 }

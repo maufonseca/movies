@@ -14,7 +14,7 @@ class BuyViewController: UIViewController {
   @IBOutlet var backbutton: UIButton!
   @IBOutlet var imageView: UIImageView!
   
-  var currentMovie : Movie?
+  var currentMovie : Movie!
   
   //Changins statusBar text to light
   override var preferredStatusBarStyle: UIStatusBarStyle {
@@ -29,7 +29,7 @@ class BuyViewController: UIViewController {
     backbutton.setImage(image, for: .normal)
     backbutton.tintColor = UIColor.white
     
-    Alamofire.request((currentMovie?.imageUrl)!).responseImage {
+    Alamofire.request(currentMovie.imageUrl).responseImage {
       response in
       if let image = response.result.value {
         self.imageView.image = image

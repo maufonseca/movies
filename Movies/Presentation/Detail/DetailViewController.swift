@@ -17,26 +17,26 @@ class DetailViewController: UIViewController {
   @IBOutlet var descriptionLabel: UILabel!
   @IBOutlet var yearLabel: UILabel!
   
-  var currentMovie : Movie?
+  var currentMovie : Movie!
   var diskOperator = BookmarkDiskOperator.init()
   
   override func viewDidLoad() {
     super.viewDidLoad()
-    titleLabel.text = currentMovie?.title
-    descriptionLabel.text = currentMovie?.overview
-    yearLabel.text = currentMovie?.getReleaseYear()
-    Alamofire.request((currentMovie?.imageUrl)!).responseImage {
+    titleLabel.text = currentMovie.title
+    descriptionLabel.text = currentMovie.overview
+    yearLabel.text = currentMovie.getReleaseYear()
+    Alamofire.request(currentMovie.imageUrl).responseImage {
       response in
       if let image = response.result.value {
         self.imageView.image = image
       }
     }
     //check bookmarked
-    if(diskOperator.isBookmarked(id: currentMovie!.id)) { //already added
-      currentMovie?.bookmarked = true
+    if(diskOperator.isBookmarked(id: currentMovie.id)) { //already added
+      currentMovie.bookmarked = true
       setupRemoveBookmarkButton()
     } else { //add to bookmark setup
-      currentMovie?.bookmarked = false
+      currentMovie.bookmarked = false
       setupAddBookmarkButton()
     }
   }
@@ -51,7 +51,7 @@ class DetailViewController: UIViewController {
   }
   
   @IBAction func bookmarkTapped(_ sender: UIButton) {
-    if(currentMovie?.bookmarked)! {
+    if currentMovie.bookmarked {
       removeBookmark()
     } else {
       addBookmark()
@@ -59,14 +59,14 @@ class DetailViewController: UIViewController {
   }
   
   func removeBookmark() {
-    diskOperator.removeBookmark(id: currentMovie!.id)
+    diskOperator.removeBookmark(id: currentMovie.id)
     currentMovie?.bookmarked = false
     setupAddBookmarkButton()
   }
   
   func addBookmark() {
     currentMovie?.bookmarked = true
-    diskOperator.addBookmark(bookmark: currentMovie!)
+    diskOperator.addBookmark(bookmark: currentMovie)
     setupRemoveBookmarkButton()
   }
   

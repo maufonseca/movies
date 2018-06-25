@@ -10,7 +10,7 @@ import Foundation
 
 class HomeInteractor : InfiniteScrollInteractionProtocol {
   var currentPage : Int = 0
-  let requester : NetworkRequestProtocol?
+  let requester : NetworkRequestProtocol!
   
   init(requester:NetworkRequestProtocol) {
     self.requester = requester
