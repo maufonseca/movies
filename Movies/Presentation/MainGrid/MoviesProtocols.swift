@@ -15,14 +15,14 @@ protocol MovieGridPresentationProtocol {
 }
 
 //Rules for displaying a movie collection grid
-protocol MovieGridDisplayProtocol {
+protocol MovieGridDisplayProtocol : class {
   func updateMovieList(array:Array<Movie>)
   func showMessage(message: String)
 }
 
 //Rules for interacting with bookmarks
 protocol BookmarkInteractionProtocol {
-  func loadBookmarks(presenter:MovieGridPresentationProtocol)
+  func loadBookmarks(presenter: MovieGridPresentationProtocol)
 }
 
 //Rules for interacting with an Infinite Scroll
@@ -35,6 +35,6 @@ protocol InfiniteScrollInteractionProtocol {
 }
 
 //Rules for displaying an infinite scroll (its a movie grid display either)
-protocol InfiniteScrollDisplayProtocol : MovieGridDisplayProtocol {
+protocol InfiniteScrollDisplayProtocol: MovieGridDisplayProtocol {
   func pauseInfiniteScroll()
 }

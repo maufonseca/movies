@@ -9,7 +9,8 @@
 import Foundation
 
 class HomePresenter : MovieGridPresentationProtocol {
-  var controller : InfiniteScrollDisplayProtocol
+
+  weak var controller : InfiniteScrollDisplayProtocol?
 
   init(controller:InfiniteScrollDisplayProtocol) {
     self.controller = controller
@@ -18,11 +19,11 @@ class HomePresenter : MovieGridPresentationProtocol {
   //MARK: Presentation protocol
   
   func updateMoviesArray(array:Array<Movie>) {
-    controller.updateMovieList(array: array)
+    controller?.updateMovieList(array: array)
   }
   
   func gotError(message:String) {
-    controller.showMessage(message:message)
-    controller.pauseInfiniteScroll()
+    controller?.showMessage(message:message)
+    controller?.pauseInfiniteScroll()
   }
 }
