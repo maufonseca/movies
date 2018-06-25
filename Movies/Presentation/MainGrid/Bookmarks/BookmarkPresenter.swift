@@ -10,12 +10,12 @@ import Foundation
 
 class BookmarkPresenter: MovieGridPresentationProtocol {
   
+  //weak var to break possible retain cycles
   weak var gridController: MovieGridDisplayProtocol?
   
   init(controller: MovieGridDisplayProtocol) {
     self.gridController = controller
   }
-  
   
   //MARK: Presentation protocol
   

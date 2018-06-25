@@ -10,6 +10,7 @@ import Foundation
 
 class HomePresenter : MovieGridPresentationProtocol {
 
+  //weak var to break possible retain cycles
   weak var controller : InfiniteScrollDisplayProtocol?
 
   init(controller:InfiniteScrollDisplayProtocol) {
