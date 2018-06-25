@@ -20,7 +20,7 @@ class HomeInteractor : InfiniteScrollInteractionProtocol {
   
   func requestCurrentPage() {
     print("requesting page: \(currentPage)")
-    requester?.requestMovieList(page: currentPage)
+    requester.requestMovieList(page: currentPage)
   }
   
   func requestNextPage() {

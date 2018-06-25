@@ -13,9 +13,9 @@ import AlamofireImage
 class BookmarkViewController: CollectionViewController {
 
   @IBOutlet var bookmarksCollectionView: UICollectionView!
-  var presenter : BookmarkPresenter!
-  var diskOperator : BookmarkDiskOperator!
-  var interactor : BookmarkInteractor!
+  var presenter : MovieGridPresentationProtocol!
+  var diskOperator : DiskWorkerProtocol!
+  var interactor : BookmarkInteractionProtocol!
   
   override func viewDidLoad() {
     collectionView = bookmarksCollectionView
