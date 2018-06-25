@@ -15,7 +15,8 @@ protocol MovieGridPresentationProtocol {
 }
 
 //Rules for displaying a movie collection grid
-protocol MovieGridDisplayProtocol: class { //only classes can implement this
+//only classes can implement this
+protocol MovieGridDisplayProtocol: AnyObject {
   func updateMovieList(array: Array<Movie>)
   func showMessage(message: String)
 }
